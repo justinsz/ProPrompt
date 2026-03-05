@@ -2,7 +2,12 @@
 
 **The ultimate guide to effective AI prompting – for GitHub Copilot, Copilot Studio Agents & Agent Toolchains.**
 
-> *Practical, no-fluff guides for non-AI-experts who want to get real results.*
+> *By [Justin Szczepaniak](https://github.com/justinsz) · Practical, no-fluff guides for non-AI-experts who want to get real results.*
+
+## 🌐 [→ Zur Website / View the Guide](https://justinsz.github.io/ProPrompt/)
+
+Die komplette Dokumentation ist als Website verfügbar – mit Navigation, Suche und Mermaid-Diagrammen.  
+The full documentation is available as a website – with navigation, search, and Mermaid diagrams.
 
 ---
 
@@ -10,38 +15,19 @@
 
 ### 🏗️ Fundamentals (Start Here)
 
-| Language | File | Description |
-|----------|------|-------------|
-| 🇩🇪 Deutsch | [guide_de.md](guide_de.md) | Grundlagen: RICE, Dos & Don'ts, Markdown, Instructions |
-| 🇬🇧 English | [guide_en.md](guide_en.md) | Fundamentals: RICE, Dos & Don'ts, Markdown, Instructions |
+| Language | Guide | Description |
+|----------|-------|-------------|
+| 🇩🇪 Deutsch | [Grundlagen](https://justinsz.github.io/ProPrompt/guide_de.html) | RICE, Dos & Don'ts, Markdown, Instructions |
+| 🇬🇧 English | [Fundamentals](https://justinsz.github.io/ProPrompt/guide_en.html) | RICE, Dos & Don'ts, Markdown, Instructions |
 
-### 📊 For Analysts
+### Job-Specific Guides
 
-| Language | File | Description |
-|----------|------|-------------|
-| 🇩🇪 Deutsch | [analysts_de.md](analysts_de.md) | Datenanalyse, Reports, SQL, KPIs, Visualisierungen |
-| 🇬🇧 English | [analysts_en.md](analysts_en.md) | Data analysis, reports, SQL, KPIs, visualizations |
-
-### ⚖️ For Legal Professionals
-
-| Language | File | Description |
-|----------|------|-------------|
-| 🇩🇪 Deutsch | [law_de.md](law_de.md) | Verträge, Compliance, DSGVO, Klauselanalyse |
-| 🇬🇧 English | [law_en.md](law_en.md) | Contracts, compliance, GDPR, clause analysis |
-
-### 💻 For Developers
-
-| Language | File | Description |
-|----------|------|-------------|
-| 🇩🇪 Deutsch | [coders_de.md](coders_de.md) | Code, Debugging, Architektur, CI/CD, Refactoring |
-| 🇬🇧 English | [coders_en.md](coders_en.md) | Code, debugging, architecture, CI/CD, refactoring |
-
-### 🏢 For Everyday Office Work
-
-| Language | File | Description |
-|----------|------|-------------|
-| 🇩🇪 Deutsch | [office_de.md](office_de.md) | E-Mails, Meetings, Präsentationen, Dateien umwandeln |
-| 🇬🇧 English | [office_en.md](office_en.md) | Emails, meetings, presentations, file conversion |
+| Guide | 🇩🇪 Deutsch | 🇬🇧 English |
+|-------|------------|------------|
+| 📊 Analysts | [Analysten](https://justinsz.github.io/ProPrompt/analysts_de.html) | [Analysts](https://justinsz.github.io/ProPrompt/analysts_en.html) |
+| ⚖️ Legal | [Juristen & Legal](https://justinsz.github.io/ProPrompt/law_de.html) | [Legal](https://justinsz.github.io/ProPrompt/law_en.html) |
+| 💻 Developers | [Entwickler](https://justinsz.github.io/ProPrompt/coders_de.html) | [Developers](https://justinsz.github.io/ProPrompt/coders_en.html) |
+| 🏢 Office | [Büroalltag](https://justinsz.github.io/ProPrompt/office_de.html) | [Office Work](https://justinsz.github.io/ProPrompt/office_en.html) |
 
 ---
 
@@ -84,7 +70,7 @@ flowchart LR
 
 ## 🏁 Quick Start
 
-1. Pick your language: **Deutsch** or **English**
+1. **[Open the website](https://justinsz.github.io/ProPrompt/)** for the best reading experience
 2. Read the **Fundamentals** guide first (RICE principle, Dos & Don'ts)
 3. Jump to your **job-specific guide** for tailored examples
 4. Use the **Cheat Sheet** templates in your daily work
@@ -97,10 +83,15 @@ Contributions are welcome! Feel free to:
 - Submit a **Pull Request** with improvements
 - Share your own prompt templates
 
+## 👤 Author
+
+**Justin Szczepaniak**  
+[GitHub](https://github.com/justinsz) · [LinkedIn](https://www.linkedin.com/in/justin-szczepaniak)
+
 ## 📄 License
 
 MIT – Free to use, modify, and distribute.
 
 ---
 
-*Built with ❤️ for the AI-curious community.*
+*Built with ❤️ by [Justin Szczepaniak](https://github.com/justinsz)*

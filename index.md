@@ -55,4 +55,8 @@ Each guide includes:
 
 ---
 
-*Built with ❤️ for the AI-curious community.*
+---
+
+**Author:** [Justin Szczepaniak](https://github.com/justinsz) · [LinkedIn](https://www.linkedin.com/in/justin-szczepaniak)  
+**Source:** [GitHub Repository](https://github.com/justinsz/ProPrompt)  
+**License:** MIT – Free to use, modify, and distribute.
