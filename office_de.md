@@ -1,8 +1,8 @@
 ---
-title: "🏢 Büroalltag"
+title: "Büroalltag"
 layout: default
 nav_order: 4
-parent: "🇩🇪 Grundlagen"
+parent: "Grundlagen"
 ---
 
 # ProPrompt für den Büroalltag
@@ -25,7 +25,7 @@ parent: "🇩🇪 Grundlagen"
 
 ## 1 Einstieg – KI im Arbeitsalltag
 
-### Schwierigkeit: ⭐ Leicht
+### Schwierigkeit: * Leicht
 
 Du brauchst kein technisches Vorwissen, um KI produktiv zu nutzen. Das Geheimnis: **klare Anweisungen geben** – genau wie an einen neuen Kollegen.
 
@@ -45,17 +45,17 @@ Sprache: Deutsch, professioneller Ton.
 
 | Regel | Beschreibung |
 |-------|-------------|
-| 🎯 Klar formulieren | „Erstelle eine 3-Sätze-Zusammenfassung" statt „Fass mal zusammen" |
-| 👤 Zielgruppe nennen | Für wen ist der Output? Management? Kunden? Team? |
-| 📋 Format vorgeben | Tabelle, Bullet Points, Fließtext, E-Mail-Format |
-| 🗣️ Ton bestimmen | Formell, informell, freundlich, sachlich |
-| 🔄 Iterieren | Ergebnis nicht perfekt? Verfeinere den Prompt |
+| Klar formulieren | „Erstelle eine 3-Sätze-Zusammenfassung" statt „Fass mal zusammen" |
+| Zielgruppe nennen | Für wen ist der Output? Management? Kunden? Team? |
+| Format vorgeben | Tabelle, Bullet Points, Fließtext, E-Mail-Format |
+| Ton bestimmen | Formell, informell, freundlich, sachlich |
+| Iterieren | Ergebnis nicht perfekt? Verfeinere den Prompt |
 
 ---
 
 ## 2 E-Mails & Kommunikation
 
-### Schwierigkeit: ⭐ Leicht
+### Schwierigkeit: * Leicht
 
 ### Beispiel – Professionelle E-Mail verfassen
 
@@ -87,7 +87,7 @@ Du bist ein erfahrener Kommunikationsberater.
 
 Formuliere die folgende Nachricht diplomatisch und professionell um:
 
-Originaltext: "Das Projekt ist verspätet weil der Kunde uns nicht 
+Originaltext: "Das Projekt ist verspätet weil der Kunde uns nicht
 rechtzeitig die Anforderungen geliefert hat."
 
 ## Anforderungen
@@ -103,18 +103,18 @@ Gib 2 Varianten: eine für interne Kommunikation, eine für den Kunden.
 
 ```mermaid
 flowchart LR
-    A[📝 Entwurf] --> B{Zielgruppe?}
-    B --> C[👔 Intern]
-    B --> D[🤝 Kunde]
-    B --> E[👥 Öffentlich]
-    
+    A[Entwurf] --> B{Zielgruppe?}
+    B --> C[Intern]
+    B --> D[Kunde]
+    B --> E[Öffentlich]
+
     C --> C1[Direkt, sachlich<br/>Details erlaubt]
     D --> D1[Professionell, diplomatisch<br/>Lösungsorientiert]
     E --> E1[PR-geprüft, neutral<br/>Keine internen Details]
-    
-    C1 & D1 & E1 --> F[🔍 Review]
-    F --> G[📧 Versand]
-    
+
+    C1 & D1 & E1 --> F[Review]
+    F --> G[Versand]
+
     style A fill:#e3f2fd
     style F fill:#fff9c4
     style G fill:#c8e6c9
@@ -124,7 +124,7 @@ flowchart LR
 
 ## 3 Meetings & Protokolle
 
-### Schwierigkeit: ⭐⭐ Mittel
+### Schwierigkeit: ** Mittel
 
 ### Beispiel – Meeting-Agenda erstellen
 
@@ -167,7 +167,7 @@ Stichpunkten:
 
 ## Format
 ### Protokoll – [Meeting-Titel]
-**Datum:** [Datum]  
+**Datum:** [Datum]
 **Teilnehmer:** [Liste]
 
 #### Beschlüsse
@@ -187,7 +187,7 @@ Stichpunkten:
 
 ## 4 Dokumente & Präsentationen
 
-### Schwierigkeit: ⭐⭐ Mittel
+### Schwierigkeit: ** Mittel
 
 ### Beispiel – Präsentations-Gliederung erstellen
 
@@ -233,11 +233,11 @@ Strukturiere den folgenden Text in ein professionelles Dokument um:
 
 ```mermaid
 flowchart LR
-    A[🔍 Problem<br/>Folien 1-3] --> B[💡 Lösung<br/>Folien 4-7]
-    B --> C[📊 Nutzen & ROI<br/>Folien 8-11]
-    C --> D[🗺️ Roadmap<br/>Folien 12-14]
-    D --> E[🎯 Call to Action<br/>Folie 15]
-    
+    A[Problem<br/>Folien 1-3] --> B[Lösung<br/>Folien 4-7]
+    B --> C[Nutzen & ROI<br/>Folien 8-11]
+    C --> D[Roadmap<br/>Folien 12-14]
+    D --> E[Call to Action<br/>Folie 15]
+
     style A fill:#ffcdd2
     style B fill:#fff9c4
     style C fill:#c8e6c9
@@ -249,7 +249,7 @@ flowchart LR
 
 ## 5 Office-Dateien in KI-freundliche Formate umwandeln
 
-### Schwierigkeit: ⭐⭐⭐ Schwer
+### Schwierigkeit: *** Schwer
 
 LLMs können keine `.docx`, `.xlsx` oder `.pptx` direkt lesen. Hier die wichtigsten Konvertierungswege:
 
@@ -310,20 +310,20 @@ def pptx_to_markdown(filepath):
 
 ```mermaid
 flowchart LR
-    A[📄 Office-Datei] --> B{Format?}
+    A[Office-Datei] --> B{Format?}
     B --> C[Word .docx]
     B --> D[Excel .xlsx]
     B --> E[PPT .pptx]
     B --> F[PDF]
-    
+
     C --> G[Pandoc]
     D --> H[Pandas]
     E --> I[python-pptx]
     F --> J[pdftotext]
-    
-    G & H & I & J --> K[📝 Markdown / CSV]
-    K --> L[✅ KI-Ready]
-    
+
+    G & H & I & J --> K[Markdown / CSV]
+    K --> L[KI-Ready]
+
     style A fill:#e3f2fd
     style K fill:#fff9c4
     style L fill:#c8e6c9
@@ -333,7 +333,7 @@ flowchart LR
 
 ## 6 Agent: Büroassistent & Helpdesk
 
-### Schwierigkeit: ⭐⭐⭐ Schwer
+### Schwierigkeit: *** Schwer
 
 ### Was ist ein Büro-Agent?
 
@@ -383,7 +383,7 @@ Wenn du das Problem nicht lösen kannst, erstelle ein Ticket mit:
 - Dringlichkeit (Niedrig/Mittel/Hoch)
 
 # Ausgabeformat
-## 🛠️ IT-Support
+## IT-Support
 
 **Problem:** [Zusammenfassung]
 
@@ -393,29 +393,29 @@ Wenn du das Problem nicht lösen kannst, erstelle ein Ticket mit:
 3. [Schritt 3]
 
 ### Hat das geholfen?
-- ✅ Ja → Schön, dass es geklappt hat!
-- ❌ Nein → Ich erstelle ein Ticket für unser IT-Team.
+- Ja → Schön, dass es geklappt hat!
+- Nein → Ich erstelle ein Ticket für unser IT-Team.
 ```
 
 ### Agent-Toolchain: Büro-Automatisierung
 
 ```mermaid
 flowchart TB
-    A[📨 E-Mail / Teams-Nachricht<br/>eingehend] --> B[🤖 Klassifizierungs-Agent]
-    
+    A[E-Mail / Teams-Nachricht<br/>eingehend] --> B[Klassifizierungs-Agent]
+
     B --> C{Kategorie?}
-    C --> D[🛠️ IT-Problem]
-    C --> E[📋 Anfrage / Genehmigung]
-    C --> F[📊 Report-Anfrage]
-    C --> G[❓ Allgemeine Frage]
-    
+    C --> D[IT-Problem]
+    C --> E[Anfrage / Genehmigung]
+    C --> F[Report-Anfrage]
+    C --> G[Allgemeine Frage]
+
     D --> D1[IT-Helpdesk-Agent]
     E --> E1[Approval-Workflow<br/>Power Automate]
     F --> F1[Report-Agent<br/>→ SharePoint]
     G --> G1[FAQ-Agent<br/>→ Wissensdatenbank]
-    
-    D1 & E1 & F1 & G1 --> H[📧 Antwort an<br/>Absender]
-    
+
+    D1 & E1 & F1 & G1 --> H[Antwort an<br/>Absender]
+
     style A fill:#e3f2fd
     style B fill:#fff3e0
     style H fill:#c8e6c9
@@ -460,6 +460,6 @@ flowchart TB
 
 ---
 
-> **Zurück zur Übersicht:** [🏠 Startseite](index.md) · [Grundlagen (DE)](guide_de.md) · [Grundlagen (EN)](guide_en.md)
+> **Zurück zur Übersicht:** [Startseite](index.md) · [Grundlagen (DE)](guide_de.md) · [Grundlagen (EN)](guide_en.md)
 >
 > Erstellt von **Justin Szczepaniak** · [GitHub-Projekt](https://github.com/justinsz/ProPrompt) · [LinkedIn](https://www.linkedin.com/in/justin-szczepaniak)

@@ -1,8 +1,8 @@
 ---
-title: "💻 Entwickler"
+title: "Entwickler"
 layout: default
 nav_order: 3
-parent: "🇩🇪 Grundlagen"
+parent: "Grundlagen"
 ---
 
 # ProPrompt für Entwickler
@@ -24,7 +24,7 @@ parent: "🇩🇪 Grundlagen"
 
 ## 1 Einstieg – Dein erster Code-Prompt
 
-### Schwierigkeit: ⭐ Leicht
+### Schwierigkeit: * Leicht
 
 Das RICE-Prinzip gilt auch beim Coden – siehe [Grundlagen](guide_de.md#2-grundlagen-des-promptings).
 
@@ -68,7 +68,7 @@ Gib die Funktion mit JSDoc-Kommentaren und 3 Beispiel-Aufrufen aus.
 
 ## 2 Code schreiben & refactoren
 
-### Schwierigkeit: ⭐⭐ Mittel
+### Schwierigkeit: ** Mittel
 
 ### Beispiel – Refactoring mit klaren Constraints
 
@@ -137,26 +137,26 @@ Erstelle einen CRUD-Endpoint für "Projects":
 
 ```mermaid
 flowchart TB
-    subgraph API["🌐 API Layer"]
+    subgraph API[" API Layer"]
         R[Routes] --> C[Controllers]
     end
-    
-    subgraph APP["⚙️ Application Layer"]
+
+    subgraph APP[" Application Layer"]
         C --> S[Services]
         S --> V[Validators]
     end
-    
-    subgraph DOMAIN["🏛️ Domain Layer"]
+
+    subgraph DOMAIN[" Domain Layer"]
         S --> E[Entities]
         S --> I[Interfaces]
     end
-    
-    subgraph INFRA["🔧 Infrastructure Layer"]
+
+    subgraph INFRA[" Infrastructure Layer"]
         I -.-> |implements| Repo[Repositories]
         Repo --> DB[(Database)]
         I -.-> |implements| Ext[External APIs]
     end
-    
+
     style API fill:#e3f2fd
     style APP fill:#fff3e0
     style DOMAIN fill:#e8f5e9
@@ -167,7 +167,7 @@ flowchart TB
 
 ## 3 Debugging & Code-Review
 
-### Schwierigkeit: ⭐⭐ Mittel
+### Schwierigkeit: ** Mittel
 
 ### Beispiel – Systematisches Debugging
 
@@ -203,33 +203,33 @@ Analysiere den Fehler im Kontext von #file:src/app.ts.
 
 ## Format
 Für jedes Finding:
-- 📍 Zeile(n)
-- ⚠️ Problem
-- ✅ Vorschlag (als Code)
-- 🏷️ Schweregrad: Kritisch / Hoch / Mittel / Niedrig
+- Zeile(n)
+- Problem
+- Vorschlag (als Code)
+- Schweregrad: Kritisch / Hoch / Mittel / Niedrig
 ```
 
 ### Fehlerklassen-Diagramm
 
 ```mermaid
 flowchart TD
-    A[🐛 Fehler aufgetreten] --> B{Fehlertyp?}
-    
-    B --> C[🔴 Compile-Error]
-    B --> D[🟠 Runtime-Error]
-    B --> E[🟡 Logic-Error]
-    
+    A[Fehler aufgetreten] --> B{Fehlertyp?}
+
+    B --> C[Hoch Compile-Error]
+    B --> D[Runtime-Error]
+    B --> E[Mittel Logic-Error]
+
     C --> C1[Typfehler prüfen<br/>`/fix` nutzen]
     D --> D1[Stack-Trace lesen<br/>Breakpoints setzen]
     E --> E1[Tests schreiben<br/>Input/Output vergleichen]
-    
-    C1 --> F[💡 Lösung gefunden?]
+
+    C1 --> F[Lösung gefunden?]
     D1 --> F
     E1 --> F
-    
-    F -- Ja --> G[✅ Fix anwenden & testen]
-    F -- Nein --> H[🤖 Agent-Modus nutzen<br/>mit vollem Kontext]
-    
+
+    F -- Ja --> G[Fix anwenden & testen]
+    F -- Nein --> H[Agent-Modus nutzen<br/>mit vollem Kontext]
+
     style C fill:#ffcdd2
     style D fill:#ffe0b2
     style E fill:#fff9c4
@@ -240,7 +240,7 @@ flowchart TD
 
 ## 4 Fortgeschritten – Architektur & komplexe Features
 
-### Schwierigkeit: ⭐⭐⭐ Schwer
+### Schwierigkeit: *** Schwer
 
 ### Beispiel – System-Design mit KI
 
@@ -300,21 +300,21 @@ Gib das Dockerfile mit Kommentaren für jeden Schritt aus.
 
 ## 5 Agent: Autonome Entwicklung im Agent-Modus
 
-### Schwierigkeit: ⭐⭐⭐ Schwer
+### Schwierigkeit: *** Schwer
 
 ### Was kann der Agent-Modus?
 
 ```mermaid
 flowchart LR
-    A[🧑‍💻 Entwickler<br/>gibt Prompt] --> B[🤖 Agent]
-    B --> C[📁 Dateien lesen]
-    B --> D[✏️ Code schreiben]
-    B --> E[🖥️ Terminal nutzen]
-    B --> F[🔍 Fehler finden]
-    
-    C & D & E & F --> G[🔄 Iterieren<br/>bis Ziel erreicht]
-    G --> H[✅ Ergebnis<br/>zur Review]
-    
+    A[Entwickler<br/>gibt Prompt] --> B[Agent]
+    B --> C[Dateien lesen]
+    B --> D[Code schreiben]
+    B --> E[Terminal nutzen]
+    B --> F[Fehler finden]
+
+    C & D & E & F --> G[Iterieren<br/>bis Ziel erreicht]
+    G --> H[Ergebnis<br/>zur Review]
+
     style A fill:#e3f2fd
     style B fill:#fff3e0
     style H fill:#c8e6c9
@@ -322,15 +322,15 @@ flowchart LR
 
 ### Wann Agent vs. Chat?
 
-| Szenario | Agent ✅ | Chat 💬 |
+| Szenario | Agent | Chat |
 |----------|---------|---------|
-| Feature über mehrere Dateien | ✅ | |
-| Ganzes Modul refactoren | ✅ | |
-| Debugging mit Terminal | ✅ | |
-| CI/CD-Pipeline aufsetzen | ✅ | |
-| Einzelne Funktion schreiben | | 💬 reicht |
-| Code erklären lassen | | 💬 reicht |
-| Schneller Regex | | 💬 reicht |
+| Feature über mehrere Dateien | Ja | |
+| Ganzes Modul refactoren | Ja | |
+| Debugging mit Terminal | Ja | |
+| CI/CD-Pipeline aufsetzen | Ja | |
+| Einzelne Funktion schreiben | | reicht |
+| Code erklären lassen | | reicht |
+| Schneller Regex | | reicht |
 
 ### Beispiel – Agent-Prompt: Neues Feature
 
@@ -372,12 +372,12 @@ Implementiere ein Benutzer-Authentifizierungssystem mit JWT.
 
 | Tipp | Beschreibung |
 |------|-------------|
-| 📋 Instruction Files | `.github/copilot-instructions.md` wird automatisch geladen |
-| 🎯 Scope begrenzen | 3 fokussierte Sessions > 1 riesige Session |
-| 🔍 Checkpoints | Nach jedem Schritt Changes reviewen |
-| 🖥️ Terminal beobachten | Agent führt Befehle aus – Nebeneffekte möglich |
-| ↩️ Undo nutzen | VS Code kann Agent-Änderungen rückgängig machen |
-| 📝 Kontext mitgeben | Relevante Dateien mit `#file:` referenzieren |
+| Instruction Files | `.github/copilot-instructions.md` wird automatisch geladen |
+| Scope begrenzen | 3 fokussierte Sessions > 1 riesige Session |
+| Checkpoints | Nach jedem Schritt Changes reviewen |
+| Terminal beobachten | Agent führt Befehle aus – Nebeneffekte möglich |
+| ↩ Undo nutzen | VS Code kann Agent-Änderungen rückgängig machen |
+| Kontext mitgeben | Relevante Dateien mit `#file:` referenzieren |
 
 ---
 
@@ -402,11 +402,11 @@ Implementiere ein Benutzer-Authentifizierungssystem mit JWT.
 
 ```
 ┌─────────────────────────────────────────┐
-│ 1. .github/copilot-instructions.md      │ ← Projektregeln (automatisch)
-│ 2. #file:relevante-datei.ts             │ ← Expliziter Kontext
-│ 3. #codebase                            │ ← Projektweite Suche
-│ 4. #terminalLastCommand                 │ ← Fehler-Kontext
-│ 5. #selection                           │ ← Markierter Code
+│ 1. .github/copilot-instructions.md │ ← Projektregeln (automatisch)
+│ 2. #file:relevante-datei.ts │ ← Expliziter Kontext
+│ 3. #codebase │ ← Projektweite Suche
+│ 4. #terminalLastCommand │ ← Fehler-Kontext
+│ 5. #selection │ ← Markierter Code
 └─────────────────────────────────────────┘
 ```
 
@@ -422,6 +422,6 @@ Implementiere ein Benutzer-Authentifizierungssystem mit JWT.
 
 ---
 
-> **Zurück zur Übersicht:** [🏠 Startseite](index.md) · [Grundlagen (DE)](guide_de.md) · [Grundlagen (EN)](guide_en.md)
+> **Zurück zur Übersicht:** [Startseite](index.md) · [Grundlagen (DE)](guide_de.md) · [Grundlagen (EN)](guide_en.md)
 >
 > Erstellt von **Justin Szczepaniak** · [GitHub-Projekt](https://github.com/justinsz/ProPrompt) · [LinkedIn](https://www.linkedin.com/in/justin-szczepaniak)

@@ -1,8 +1,8 @@
 ---
-title: "📊 Analysts"
+title: "Analysts"
 layout: default
 nav_order: 1
-parent: "🇬🇧 Fundamentals"
+parent: "Fundamentals"
 ---
 
 # ProPrompt for Analysts
@@ -24,7 +24,7 @@ parent: "🇬🇧 Fundamentals"
 
 ## 1 Getting Started – Your First Analysis Prompt
 
-### Difficulty: ⭐ Easy
+### Difficulty: * Easy
 
 First things first: A good analysis prompt follows the **RICE framework** (→ see [Fundamentals](guide_en.md#2-prompting-fundamentals)).
 
@@ -48,16 +48,16 @@ Output the summary as a Markdown table with:
 
 | Tip | Description |
 |-----|-------------|
-| 🎯 Be specific | "Analyze Q1 revenue by region" instead of "Look at the data" |
-| 📊 Define format | Table, bullet points, or JSON – always specify |
-| 🔢 Name your KPIs | Which metrics? Revenue, margin, growth, churn? |
-| 📅 Define the period | Always state the analysis time frame |
+| Be specific | "Analyze Q1 revenue by region" instead of "Look at the data" |
+| Define format | Table, bullet points, or JSON – always specify |
+| Name your KPIs | Which metrics? Revenue, margin, growth, churn? |
+| Define the period | Always state the analysis time frame |
 
 ---
 
 ## 2 Summarizing & Preparing Data
 
-### Difficulty: ⭐⭐ Medium
+### Difficulty: ** Medium
 
 ### Example – Preparing Excel Data for AI
 
@@ -106,7 +106,7 @@ For converting Excel, Word, or PowerPoint into AI-friendly formats → see [Prep
 
 ## 3 Generating Reports & Dashboards
 
-### Difficulty: ⭐⭐ Medium
+### Difficulty: ** Medium
 
 ### Example – Creating a Management Report
 
@@ -163,12 +163,12 @@ xychart-beta
 
 ```mermaid
 flowchart LR
-    A[📥 Raw Data] --> B[🔄 Cleansing]
-    B --> C[📊 Analysis]
+    A[Raw Data] --> B[Cleansing]
+    B --> C[Analysis]
     C --> D{Result OK?}
-    D -- Yes --> E[📋 Report]
+    D -- Yes --> E[Report]
     D -- No --> B
-    E --> F[📧 Send to Stakeholders]
+    E --> F[Send to Stakeholders]
 
     style A fill:#e1f5fe
     style E fill:#c8e6c9
@@ -179,7 +179,7 @@ flowchart LR
 
 ## 4 Advanced – Complex Analyses
 
-### Difficulty: ⭐⭐⭐ Hard
+### Difficulty: *** Hard
 
 ### Example – Cohort Analysis with Python
 
@@ -229,7 +229,7 @@ Output the code with detailed comments.
 
 ## 5 Agent: Automated Analysis Pipelines
 
-### Difficulty: ⭐⭐⭐ Hard
+### Difficulty: *** Hard
 
 ### What Is an Analysis Agent?
 
@@ -269,16 +269,16 @@ You are ReportBot, the automated reporting assistant for the Controlling team.
 5. Highlight critical deviations (> 10%) in red
 
 # Output Format
-## 📊 Monthly Report [Month] [Year]
+## Monthly Report [Month] [Year]
 
 | KPI | Plan | Actual | Deviation | Trend |
 |-----|------|--------|-----------|-------|
 | Revenue | €X | €Y | Z% | ↑/↓ |
 
-### ⚠️ Critical Deviations
+### Critical Deviations
 - [KPI]: [Details]
 
-### 💡 Recommendations
+### Recommendations
 - [Action 1]
 - [Action 2]
 ```
@@ -287,17 +287,17 @@ You are ReportBot, the automated reporting assistant for the Controlling team.
 
 ```mermaid
 flowchart TB
-    A[👤 Analyst asks:<br/>'Create Q1 Report'] --> B[🤖 Orchestrator Agent]
-    B --> C[📥 Data Agent]
-    B --> D[📊 Analysis Agent]
-    B --> E[📝 Report Agent]
-    
+    A[Analyst asks:<br/>'Create Q1 Report'] --> B[Orchestrator Agent]
+    B --> C[Data Agent]
+    B --> D[Analysis Agent]
+    B --> E[Report Agent]
+
     C --> |Loads raw data| C1[SharePoint / Excel / DB]
     C --> |Cleans & formats| D
     D --> |Calculates KPIs| D1[Deviations<br/>Trends<br/>Forecasts]
     D --> |Results| E
-    E --> |Generates| E1[📋 Executive Summary<br/>📊 Detail Report<br/>📧 Email Draft]
-    
+    E --> |Generates| E1[Executive Summary<br/> Detail Report<br/> Email Draft]
+
     style A fill:#e3f2fd
     style B fill:#fff3e0
     style C fill:#e8f5e9
@@ -359,6 +359,6 @@ Create a Python script that generates an automated monthly report.
 
 ---
 
-> **Back to overview:** [🏠 Home](index.md) · [Fundamentals (DE)](guide_de.md) · [Fundamentals (EN)](guide_en.md)
+> **Back to overview:** [Home](index.md) · [Fundamentals (DE)](guide_de.md) · [Fundamentals (EN)](guide_en.md)
 >
 > Created by **Justin Szczepaniak** · [GitHub Project](https://github.com/justinsz/ProPrompt) · [LinkedIn](https://www.linkedin.com/in/justin-szczepaniak)

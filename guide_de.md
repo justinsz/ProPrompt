@@ -1,5 +1,5 @@
 ---
-title: "🇩🇪 Grundlagen"
+title: "Grundlagen"
 layout: default
 nav_order: 2
 has_children: true
@@ -8,7 +8,7 @@ has_children: true
 # ProPrompt – Grundlagen des effektiven Promptings
 
 > **Zielgruppe:** Alle, die GitHub Copilot, Copilot Studio Agents oder KI-gestützte Toolchains produktiv einsetzen wollen – auch ohne KI-Vorwissen.
-> 
+>
 > **Berufsspezifische Guides:** [Analysten](analysts_de.md) · [Juristen](law_de.md) · [Entwickler](coders_de.md) · [Büroalltag](office_de.md)
 
 ---
@@ -37,9 +37,9 @@ Markdown ist das Standardformat für Dokumentation und KI-Kontextdateien. Hier d
 ## Überschrift 2
 ### Überschrift 3
 
-**Fett**  
-*Kursiv*  
-~~Durchgestrichen~~  
+**Fett**
+*Kursiv*
+~~Durchgestrichen~~
 `Inline-Code`
 ```
 
@@ -75,7 +75,7 @@ def hello():
 ```markdown
 | Spalte A | Spalte B |
 |----------|----------|
-| Wert 1   | Wert 2   |
+| Wert 1 | Wert 2 |
 ```
 
 ### Warum Markdown für KI?
@@ -107,17 +107,17 @@ Ein Prompt ist die **Anweisung**, die du an ein KI-Modell sendest. Je klarer und
 > **R**olle → **I**nstruktion → **C**ontext → **E**xpected Output
 
 ```
-Rolle:      Du bist ein Senior DevOps Engineer.
+Rolle: Du bist ein Senior DevOps Engineer.
 Instruktion: Erstelle ein Dockerfile für eine Node.js 20-App.
-Context:     Die App nutzt pnpm, hat ein /src-Verzeichnis und braucht Port 3000.
-Expected:    Multi-Stage Dockerfile mit Kommentaren.
+Context: Die App nutzt pnpm, hat ein /src-Verzeichnis und braucht Port 3000.
+Expected: Multi-Stage Dockerfile mit Kommentaren.
 ```
 
 ---
 
 ## 3 Dos & Don'ts – Übersicht
 
-### ✅ DOs
+### DOs
 
 | # | Do | Warum |
 |---|-----|-------|
@@ -132,7 +132,7 @@ Expected:    Multi-Stage Dockerfile mit Kommentaren.
 | 9 | **Prüfe die Ausgabe** | KI-Output immer reviewen, nie blind übernehmen |
 | 10 | **Nutze Custom Instructions** | `.github/copilot-instructions.md` für projektweite Regeln |
 
-### ❌ DON'Ts
+### DON'Ts
 
 | # | Don't | Warum |
 |---|-------|-------|
@@ -188,7 +188,7 @@ Der folgende Fehler tritt auf: #terminalLastCommand
 Analysiere den Fehler im Kontext von #file:src/app.ts und schlage eine Lösung vor.
 ```
 
-> 💡 **Mehr Beispiele findest du in den berufsspezifischen Guides:**  
+> **Mehr Beispiele findest du in den berufsspezifischen Guides:**
 > [Analysten](analysts_de.md) · [Juristen](law_de.md) · [Entwickler](coders_de.md) · [Büroalltag](office_de.md)
 
 ---
@@ -205,13 +205,13 @@ Der Agent-Modus in VS Code erlaubt Copilot, **selbstständig** mehrere Schritte 
 
 ### Wann Agent-Modus nutzen?
 
-| Szenario | Agent ✅ | Chat 💬 |
+| Szenario | Agent | Chat |
 |----------|---------|---------|
-| Neues Feature über mehrere Dateien | ✅ | |
-| Refactoring eines ganzen Moduls | ✅ | |
-| Debugging mit Terminalzugriff | ✅ | |
-| Einzelne Funktion schreiben | | 💬 reicht |
-| Schnelle Erklärung | | 💬 reicht |
+| Neues Feature über mehrere Dateien | Ja | |
+| Refactoring eines ganzen Moduls | Ja | |
+| Debugging mit Terminalzugriff | Ja | |
+| Einzelne Funktion schreiben | | reicht |
+| Schnelle Erklärung | | reicht |
 
 ### Struktur für Agent-Prompts
 
@@ -243,7 +243,7 @@ Der Agent-Modus in VS Code erlaubt Copilot, **selbstständig** mehrere Schritte 
 4. **Terminal-Output beobachten** – Agent führt Befehle aus, die Nebeneffekte haben können
 5. **Undo nutzen** – VS Code kann Agent-Änderungen rückgängig machen
 
-> 💡 **Ausführliche Agent-Beispiele findest du in:**  
+> **Ausführliche Agent-Beispiele findest du in:**
 > [Analysten](analysts_de.md) · [Juristen](law_de.md) · [Entwickler](coders_de.md) · [Büroalltag](office_de.md)
 
 ---
@@ -283,20 +283,20 @@ Du bist [Name], ein Assistent für [Zweck].
 
 ```mermaid
 flowchart TB
-    A[👤 Benutzer-Anfrage] --> B[🤖 Orchestrator-Agent]
+    A[Benutzer-Anfrage] --> B[Orchestrator-Agent]
     B --> C[Agent A<br/>Recherche]
     B --> D[Agent B<br/>Verarbeitung]
     B --> E[Agent C<br/>Review]
-    C & D & E --> F[📋 Zusammenfassung]
-    F --> G[👤 Benutzer-Antwort]
-    
+    C & D & E --> F[Zusammenfassung]
+    F --> G[Benutzer-Antwort]
+
     style A fill:#e3f2fd
     style B fill:#fff3e0
     style F fill:#e8f5e9
     style G fill:#c8e6c9
 ```
 
-> 💡 **Berufsspezifische Agent-Beispiele:**  
+> **Berufsspezifische Agent-Beispiele:**
 > [Reporting-Agent (Analysten)](analysts_de.md#5-agent-automatisierte-analyse-pipelines) · [Vertrags-Agent (Legal)](law_de.md#5-agent-automatisierte-vertrags---compliance-prüfung) · [IT-Helpdesk (Büro)](office_de.md#6-agent-büroassistent--helpdesk)
 
 ---
@@ -307,13 +307,13 @@ flowchart TB
 
 ```
 ┌────────────────────────────────────┐
-│  1. VS Code Settings (global)       │  → Gilt für alle Projekte
+│ 1. VS Code Settings (global) │ → Gilt für alle Projekte
 ├────────────────────────────────────┤
-│  2. .github/copilot-instructions.md │  → Gilt für das Projekt
+│ 2. .github/copilot-instructions.md │ → Gilt für das Projekt
 ├────────────────────────────────────┤
-│  3. .copilot/*.md                   │  → Kontextdateien pro Thema
+│ 3. .copilot/*.md │ → Kontextdateien pro Thema
 ├────────────────────────────────────┤
-│  4. Inline-Prompt-Kontext           │  → Gilt für die einzelne Anfrage
+│ 4. Inline-Prompt-Kontext │ → Gilt für die einzelne Anfrage
 └────────────────────────────────────┘
 ```
 
@@ -425,10 +425,10 @@ Schreibe Unit-Tests für #file:
 
 | Guide | Beschreibung |
 |-------|-------------|
-| 📊 [Analysten](analysts_de.md) | Datenanalyse, Reports, SQL, KPIs, Visualisierungen |
-| ⚖️ [Juristen & Legal](law_de.md) | Verträge, Compliance, DSGVO, Klauselanalyse |
-| 💻 [Entwickler](coders_de.md) | Code, Debugging, Architektur, CI/CD, Refactoring |
-| 🏢 [Büroalltag](office_de.md) | E-Mails, Meetings, Präsentationen, Dateien umwandeln |
+| [Analysten](analysts_de.md) | Datenanalyse, Reports, SQL, KPIs, Visualisierungen |
+| [Juristen & Legal](law_de.md) | Verträge, Compliance, DSGVO, Klauselanalyse |
+| [Entwickler](coders_de.md) | Code, Debugging, Architektur, CI/CD, Refactoring |
+| [Büroalltag](office_de.md) | E-Mails, Meetings, Präsentationen, Dateien umwandeln |
 
 ## Weiterführende Links
 
@@ -440,5 +440,5 @@ Schreibe Unit-Tests für #file:
 
 ---
 
-> **Lizenz:** MIT – Frei verwendbar und anpassbar.  
+> **Lizenz:** MIT – Frei verwendbar und anpassbar.
 > **Beitragen:** Pull Requests und Issues sind willkommen!

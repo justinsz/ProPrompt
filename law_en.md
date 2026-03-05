@@ -1,8 +1,8 @@
 ---
-title: "⚖️ Legal"
+title: "Legal"
 layout: default
 nav_order: 2
-parent: "🇬🇧 Fundamentals"
+parent: "Fundamentals"
 ---
 
 # ProPrompt for Legal Professionals
@@ -24,9 +24,9 @@ parent: "🇬🇧 Fundamentals"
 
 ## 1 Getting Started – Working with Legal Texts & AI
 
-### Difficulty: ⭐ Easy
+### Difficulty: * Easy
 
-> ⚠️ **Important Notice:** AI outputs are **not legal advice**. All results must be reviewed by qualified legal professionals. AI assists with drafting, summarizing, and structuring – legal judgment remains with humans.
+> **Important Notice:** AI outputs are **not legal advice**. All results must be reviewed by qualified legal professionals. AI assists with drafting, summarizing, and structuring – legal judgment remains with humans.
 
 ### Example – Explaining a Contract Clause in Plain Language
 
@@ -56,16 +56,16 @@ Output:
 
 | Tip | Description |
 |-----|-------------|
-| ⚖️ Provide context | Always specify legal area, jurisdiction, and contract type |
-| 📋 Embed source | Quote the clause or statute directly in the prompt |
-| 🎯 Narrow the task | "Analyze clause 5.2" instead of "Review the entire contract" |
-| ⚠️ Know AI limits | Always treat as draft/preliminary work, never as legal advice |
+| Provide context | Always specify legal area, jurisdiction, and contract type |
+| Embed source | Quote the clause or statute directly in the prompt |
+| Narrow the task | "Analyze clause 5.2" instead of "Review the entire contract" |
+| Know AI limits | Always treat as draft/preliminary work, never as legal advice |
 
 ---
 
 ## 2 Analyzing & Summarizing Contracts
 
-### Difficulty: ⭐⭐ Medium
+### Difficulty: ** Medium
 
 ### Example – Structured Contract Summary
 
@@ -79,7 +79,7 @@ a structured summary:
 
 ## Desired Format
 
-### 📋 Contract Overview
+### Contract Overview
 | Field | Content |
 |-------|---------|
 | Contracting Parties | |
@@ -88,13 +88,13 @@ a structured summary:
 | Compensation | |
 | Notice Period | |
 
-### ⚠️ Critical Clauses
+### Critical Clauses
 - [Clause + Risk Assessment]
 
-### 🔍 Missing Provisions
+### Missing Provisions
 - [What's missing in the contract?]
 
-### 💡 Recommendations
+### Recommendations
 - [Prioritized recommendations]
 ```
 
@@ -116,24 +116,24 @@ Create a change table:
 | # | Clause | Version A | Version B | Assessment | Recommendation |
 |---|--------|-----------|-----------|------------|----------------|
 
-Assessment: 🟢 Acceptable / 🟡 Negotiable / 🔴 Critical
+Assessment: Low Acceptable / Medium Negotiable / High Critical
 ```
 
 ### Visualization – Contract Lifecycle
 
 ```mermaid
 flowchart LR
-    A[📝 Draft] --> B[🔍 Internal Review]
-    B --> C[📨 Send to<br/>Counterparty]
-    C --> D[🔄 Negotiation]
+    A[Draft] --> B[Internal Review]
+    B --> C[Send to<br/>Counterparty]
+    C --> D[Negotiation]
     D --> E{Agreement?}
-    E -- Yes --> F[✍️ Execution]
+    E -- Yes --> F[Execution]
     E -- No --> D
-    F --> G[📁 Archiving]
-    G --> H[⏰ Deadline<br/>Monitoring]
+    F --> G[Archiving]
+    G --> H[Deadline<br/>Monitoring]
     H --> I{Renewal?}
     I -- Yes --> G
-    I -- No --> J[📤 Termination]
+    I -- No --> J[Termination]
 
     style A fill:#e3f2fd
     style F fill:#c8e6c9
@@ -145,7 +145,7 @@ flowchart LR
 
 ## 3 Compliance & Regulation
 
-### Difficulty: ⭐⭐ Medium
+### Difficulty: ** Medium
 
 ### Example – GDPR Assessment of a Process
 
@@ -196,7 +196,7 @@ Format as a table, sorted by urgency.
 
 ## 4 Advanced – Complex Legal Analyses
 
-### Difficulty: ⭐⭐⭐ Hard
+### Difficulty: *** Hard
 
 ### Example – Multi-Jurisdiction Comparison
 
@@ -204,9 +204,9 @@ Format as a table, sorted by urgency.
 You are an international corporate lawyer.
 
 Compare the regulations for temporary staffing in:
-- 🇺🇸 United States (Federal & key states)
-- 🇬🇧 United Kingdom
-- 🇩🇪 Germany (AÜG)
+- United States (Federal & key states)
+- United Kingdom
+- Germany (AÜG)
 
 ## Comparison Criteria
 | Criterion | US | UK | DE |
@@ -256,7 +256,7 @@ For each variant:
 
 ## 5 Agent: Automated Contract & Compliance Review
 
-### Difficulty: ⭐⭐⭐ Hard
+### Difficulty: *** Hard
 
 ### What Is a Legal Agent?
 
@@ -282,7 +282,7 @@ for Contoso Corp's Legal Department.
 # Behavior
 - Respond in English
 - Use legal terminology but explain complex concepts
-- Rate risks on a scale: 🟢 Low / 🟡 Medium / 🔴 High
+- Rate risks on a scale: Low / Medium / High
 - ALWAYS note that results must be reviewed by a qualified lawyer
 
 # Review Checklist
@@ -298,7 +298,7 @@ for Contoso Corp's Legal Department.
 10. Compliance clause (anti-corruption) included?
 
 # Output Format
-## 📋 Contract Review: [Contract Name]
+## Contract Review: [Contract Name]
 
 ### Summary
 [2-3 sentences]
@@ -307,14 +307,14 @@ for Contoso Corp's Legal Department.
 | # | Check Point | Status | Comment |
 |---|-------------|--------|---------|
 
-### ⚠️ Top Risks
+### Top Risks
 1. [Risk + Recommendation]
 
-### ✅ Next Steps
+### Next Steps
 1. [Action + Responsible party]
 
 ---
-⚖️ *Disclaimer: This analysis does not constitute legal advice.
+ *Disclaimer: This analysis does not constitute legal advice.
 Please have all results reviewed by a qualified legal professional.*
 ```
 
@@ -322,23 +322,23 @@ Please have all results reviewed by a qualified legal professional.*
 
 ```mermaid
 flowchart TB
-    A[📄 New Contract<br/>Received] --> B[🤖 Orchestrator]
-    
-    B --> C[📝 Extraction Agent]
-    B --> D[⚖️ Review Agent]
-    B --> E[📊 Risk Agent]
-    
+    A[New Contract<br/>Received] --> B[Orchestrator]
+
+    B --> C[Extraction Agent]
+    B --> D[Review Agent]
+    B --> E[Risk Agent]
+
     C --> |Extracts key data| C1[Parties, Term,<br/>Values, Deadlines]
     C --> D
-    D --> |Checks against<br/>clause library| D1[✅ Present<br/>⚠️ Missing<br/>🔴 Critical]
+    D --> |Checks against<br/>clause library| D1[Present<br/> Missing<br/>High Critical]
     D --> E
     E --> |Assesses risks| E1[Risk Classes<br/>Impact Analysis<br/>Recommendations]
-    E --> F[📋 Review Report]
+    E --> F[Review Report]
     F --> G{Risk Level?}
-    G -- 🟢 Low --> H[✅ Approval Recommended]
-    G -- 🟡 Medium --> I[⚠️ Renegotiation Advised]
-    G -- 🔴 High --> J[🚨 Escalate to<br/>Head of Legal]
-    
+    G -- Low --> H[Approval Recommended]
+    G -- Medium --> I[Renegotiation Advised]
+    G -- High --> J[Escalate to<br/>Head of Legal]
+
     style A fill:#e3f2fd
     style F fill:#fff3e0
     style H fill:#c8e6c9
@@ -401,8 +401,8 @@ against a review checklist.
 
 ---
 
-> ⚖️ **Liability Notice:** All AI-generated legal content is non-binding and does not constitute qualified legal advice.
+> **Liability Notice:** All AI-generated legal content is non-binding and does not constitute qualified legal advice.
 
-> **Back to overview:** [🏠 Home](index.md) · [Fundamentals (DE)](guide_de.md) · [Fundamentals (EN)](guide_en.md)
+> **Back to overview:** [Home](index.md) · [Fundamentals (DE)](guide_de.md) · [Fundamentals (EN)](guide_en.md)
 >
 > Created by **Justin Szczepaniak** · [GitHub Project](https://github.com/justinsz/ProPrompt) · [LinkedIn](https://www.linkedin.com/in/justin-szczepaniak)

@@ -1,8 +1,8 @@
 ---
-title: "🏢 Office Work"
+title: "Office Work"
 layout: default
 nav_order: 4
-parent: "🇬🇧 Fundamentals"
+parent: "Fundamentals"
 ---
 
 # ProPrompt for Everyday Office Work
@@ -25,7 +25,7 @@ parent: "🇬🇧 Fundamentals"
 
 ## 1 Getting Started – AI in Your Workday
 
-### Difficulty: ⭐ Easy
+### Difficulty: * Easy
 
 You don't need technical knowledge to use AI productively. The secret: **give clear instructions** – just like you would to a new colleague.
 
@@ -45,17 +45,17 @@ Language: English, professional tone.
 
 | Rule | Description |
 |------|-------------|
-| 🎯 Be specific | "Create a 3-sentence summary" instead of "Summarize this" |
-| 👤 Name your audience | Who is the output for? Management? Clients? Team? |
-| 📋 Define the format | Table, bullet points, prose, email format |
-| 🗣️ Set the tone | Formal, informal, friendly, matter-of-fact |
-| 🔄 Iterate | Result not perfect? Refine the prompt |
+| Be specific | "Create a 3-sentence summary" instead of "Summarize this" |
+| Name your audience | Who is the output for? Management? Clients? Team? |
+| Define the format | Table, bullet points, prose, email format |
+| Set the tone | Formal, informal, friendly, matter-of-fact |
+| Iterate | Result not perfect? Refine the prompt |
 
 ---
 
 ## 2 Emails & Communication
 
-### Difficulty: ⭐ Easy
+### Difficulty: * Easy
 
 ### Example – Drafting a Professional Email
 
@@ -87,7 +87,7 @@ You are an experienced communications consultant.
 
 Rephrase the following message diplomatically and professionally:
 
-Original: "The project is delayed because the client didn't 
+Original: "The project is delayed because the client didn't
 deliver the requirements on time."
 
 ## Requirements
@@ -103,18 +103,18 @@ Provide 2 variants: one for internal communication, one for the client.
 
 ```mermaid
 flowchart LR
-    A[📝 Draft] --> B{Audience?}
-    B --> C[👔 Internal]
-    B --> D[🤝 Client]
-    B --> E[👥 Public]
-    
+    A[Draft] --> B{Audience?}
+    B --> C[Internal]
+    B --> D[Client]
+    B --> E[Public]
+
     C --> C1[Direct, factual<br/>Details allowed]
     D --> D1[Professional, diplomatic<br/>Solution-oriented]
     E --> E1[PR-reviewed, neutral<br/>No internal details]
-    
-    C1 & D1 & E1 --> F[🔍 Review]
-    F --> G[📧 Send]
-    
+
+    C1 & D1 & E1 --> F[Review]
+    F --> G[Send]
+
     style A fill:#e3f2fd
     style F fill:#fff9c4
     style G fill:#c8e6c9
@@ -124,7 +124,7 @@ flowchart LR
 
 ## 3 Meetings & Minutes
 
-### Difficulty: ⭐⭐ Medium
+### Difficulty: ** Medium
 
 ### Example – Creating a Meeting Agenda
 
@@ -166,7 +166,7 @@ Create professional meeting minutes from the following rough notes:
 
 ## Format
 ### Minutes – [Meeting Title]
-**Date:** [Date]  
+**Date:** [Date]
 **Attendees:** [List]
 
 #### Decisions
@@ -186,7 +186,7 @@ Create professional meeting minutes from the following rough notes:
 
 ## 4 Documents & Presentations
 
-### Difficulty: ⭐⭐ Medium
+### Difficulty: ** Medium
 
 ### Example – Creating a Presentation Outline
 
@@ -232,11 +232,11 @@ Restructure the following text into a professional document:
 
 ```mermaid
 flowchart LR
-    A[🔍 Problem<br/>Slides 1-3] --> B[💡 Solution<br/>Slides 4-7]
-    B --> C[📊 Value & ROI<br/>Slides 8-11]
-    C --> D[🗺️ Roadmap<br/>Slides 12-14]
-    D --> E[🎯 Call to Action<br/>Slide 15]
-    
+    A[Problem<br/>Slides 1-3] --> B[Solution<br/>Slides 4-7]
+    B --> C[Value & ROI<br/>Slides 8-11]
+    C --> D[Roadmap<br/>Slides 12-14]
+    D --> E[Call to Action<br/>Slide 15]
+
     style A fill:#ffcdd2
     style B fill:#fff9c4
     style C fill:#c8e6c9
@@ -248,7 +248,7 @@ flowchart LR
 
 ## 5 Converting Office Files to AI-Friendly Formats
 
-### Difficulty: ⭐⭐⭐ Hard
+### Difficulty: *** Hard
 
 LLMs cannot directly read `.docx`, `.xlsx`, or `.pptx` files. Here are the key conversion paths:
 
@@ -309,20 +309,20 @@ def pptx_to_markdown(filepath):
 
 ```mermaid
 flowchart LR
-    A[📄 Office File] --> B{Format?}
+    A[Office File] --> B{Format?}
     B --> C[Word .docx]
     B --> D[Excel .xlsx]
     B --> E[PPT .pptx]
     B --> F[PDF]
-    
+
     C --> G[Pandoc]
     D --> H[Pandas]
     E --> I[python-pptx]
     F --> J[pdftotext]
-    
-    G & H & I & J --> K[📝 Markdown / CSV]
-    K --> L[✅ AI-Ready]
-    
+
+    G & H & I & J --> K[Markdown / CSV]
+    K --> L[AI-Ready]
+
     style A fill:#e3f2fd
     style K fill:#fff9c4
     style L fill:#c8e6c9
@@ -332,7 +332,7 @@ flowchart LR
 
 ## 6 Agent: Office Assistant & Helpdesk
 
-### Difficulty: ⭐⭐⭐ Hard
+### Difficulty: *** Hard
 
 ### What Is an Office Agent?
 
@@ -382,7 +382,7 @@ If you cannot resolve the issue, create a ticket with:
 - Priority (Low/Medium/High)
 
 # Output Format
-## 🛠️ IT Support
+## IT Support
 
 **Issue:** [Summary]
 
@@ -392,29 +392,29 @@ If you cannot resolve the issue, create a ticket with:
 3. [Step 3]
 
 ### Did this help?
-- ✅ Yes → Glad it worked!
-- ❌ No → I'll create a ticket for our IT team.
+- Yes → Glad it worked!
+- No → I'll create a ticket for our IT team.
 ```
 
 ### Agent Toolchain: Office Automation
 
 ```mermaid
 flowchart TB
-    A[📨 Email / Teams Message<br/>Incoming] --> B[🤖 Classification Agent]
-    
+    A[Email / Teams Message<br/>Incoming] --> B[Classification Agent]
+
     B --> C{Category?}
-    C --> D[🛠️ IT Issue]
-    C --> E[📋 Request / Approval]
-    C --> F[📊 Report Request]
-    C --> G[❓ General Question]
-    
+    C --> D[IT Issue]
+    C --> E[Request / Approval]
+    C --> F[Report Request]
+    C --> G[General Question]
+
     D --> D1[IT Helpdesk Agent]
     E --> E1[Approval Workflow<br/>Power Automate]
     F --> F1[Report Agent<br/>→ SharePoint]
     G --> G1[FAQ Agent<br/>→ Knowledge Base]
-    
-    D1 & E1 & F1 & G1 --> H[📧 Response to<br/>Sender]
-    
+
+    D1 & E1 & F1 & G1 --> H[Response to<br/>Sender]
+
     style A fill:#e3f2fd
     style B fill:#fff3e0
     style H fill:#c8e6c9
@@ -459,6 +459,6 @@ flowchart TB
 
 ---
 
-> **Back to overview:** [🏠 Home](index.md) · [Fundamentals (DE)](guide_de.md) · [Fundamentals (EN)](guide_en.md)
+> **Back to overview:** [Home](index.md) · [Fundamentals (DE)](guide_de.md) · [Fundamentals (EN)](guide_en.md)
 >
 > Created by **Justin Szczepaniak** · [GitHub Project](https://github.com/justinsz/ProPrompt) · [LinkedIn](https://www.linkedin.com/in/justin-szczepaniak)

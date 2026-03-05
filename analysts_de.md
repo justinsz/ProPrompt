@@ -1,8 +1,8 @@
 ---
-title: "📊 Analysten"
+title: "Analysten"
 layout: default
 nav_order: 1
-parent: "🇩🇪 Grundlagen"
+parent: "Grundlagen"
 ---
 
 # ProPrompt für Analysten
@@ -24,7 +24,7 @@ parent: "🇩🇪 Grundlagen"
 
 ## 1 Einstieg – Dein erster Analyse-Prompt
 
-### Schwierigkeit: ⭐ Leicht
+### Schwierigkeit: * Leicht
 
 Das Wichtigste zuerst: Ein guter Analyse-Prompt folgt dem **RICE-Prinzip** (→ siehe [Grundlagen](guide_de.md#2-grundlagen-des-promptings)).
 
@@ -48,16 +48,16 @@ Gib die Zusammenfassung als Markdown-Tabelle aus mit:
 
 | Tipp | Beschreibung |
 |------|-------------|
-| 🎯 Sei spezifisch | „Analysiere Q1-Umsatz nach Region" statt „Schau dir die Daten an" |
-| 📊 Format vorgeben | Tabelle, Bullet Points oder JSON – immer mitgeben |
-| 🔢 Kennzahlen benennen | Welche KPIs? Umsatz, Marge, Wachstum, Churn? |
-| 📅 Zeitraum definieren | Immer den Analyse-Zeitraum angeben |
+| Sei spezifisch | „Analysiere Q1-Umsatz nach Region" statt „Schau dir die Daten an" |
+| Format vorgeben | Tabelle, Bullet Points oder JSON – immer mitgeben |
+| Kennzahlen benennen | Welche KPIs? Umsatz, Marge, Wachstum, Churn? |
+| Zeitraum definieren | Immer den Analyse-Zeitraum angeben |
 
 ---
 
 ## 2 Daten zusammenfassen & aufbereiten
 
-### Schwierigkeit: ⭐⭐ Mittel
+### Schwierigkeit: ** Mittel
 
 ### Beispiel – Excel-Daten für KI aufbereiten
 
@@ -106,7 +106,7 @@ Für die Konvertierung von Excel, Word oder PowerPoint in KI-freundliche Formate
 
 ## 3 Reports & Dashboards generieren
 
-### Schwierigkeit: ⭐⭐ Mittel
+### Schwierigkeit: ** Mittel
 
 ### Beispiel – Management-Report erstellen
 
@@ -163,12 +163,12 @@ xychart-beta
 
 ```mermaid
 flowchart LR
-    A[📥 Rohdaten] --> B[🔄 Bereinigung]
-    B --> C[📊 Analyse]
+    A[Rohdaten] --> B[Bereinigung]
+    B --> C[Analyse]
     C --> D{Ergebnis OK?}
-    D -- Ja --> E[📋 Report]
+    D -- Ja --> E[Report]
     D -- Nein --> B
-    E --> F[📧 Versand an Stakeholder]
+    E --> F[Versand an Stakeholder]
 
     style A fill:#e1f5fe
     style E fill:#c8e6c9
@@ -179,7 +179,7 @@ flowchart LR
 
 ## 4 Fortgeschritten – Komplexe Analysen
 
-### Schwierigkeit: ⭐⭐⭐ Schwer
+### Schwierigkeit: *** Schwer
 
 ### Beispiel – Kohortenanalyse mit Python
 
@@ -229,7 +229,7 @@ Gib den Code mit ausführlichen Kommentaren aus.
 
 ## 5 Agent: Automatisierte Analyse-Pipelines
 
-### Schwierigkeit: ⭐⭐⭐ Schwer
+### Schwierigkeit: *** Schwer
 
 ### Was ist ein Analyse-Agent?
 
@@ -269,16 +269,16 @@ Du bist ReportBot, der automatisierte Reporting-Assistent für das Controlling-T
 5. Hebe kritische Abweichungen (> 10%) rot hervor
 
 # Ausgabeformat
-## 📊 Monatsreport [Monat] [Jahr]
+## Monatsreport [Monat] [Jahr]
 
 | KPI | Plan | Ist | Abweichung | Trend |
 |-----|------|-----|-----------|-------|
 | Umsatz | X € | Y € | Z% | ↑/↓ |
 
-### ⚠️ Kritische Abweichungen
+### Kritische Abweichungen
 - [KPI]: [Details]
 
-### 💡 Empfehlungen
+### Empfehlungen
 - [Maßnahme 1]
 - [Maßnahme 2]
 ```
@@ -287,17 +287,17 @@ Du bist ReportBot, der automatisierte Reporting-Assistent für das Controlling-T
 
 ```mermaid
 flowchart TB
-    A[👤 Analyst fragt:<br/>'Erstelle Q1-Report'] --> B[🤖 Orchestrator-Agent]
-    B --> C[📥 Daten-Agent]
-    B --> D[📊 Analyse-Agent]
-    B --> E[📝 Report-Agent]
-    
+    A[Analyst fragt:<br/>'Erstelle Q1-Report'] --> B[Orchestrator-Agent]
+    B --> C[Daten-Agent]
+    B --> D[Analyse-Agent]
+    B --> E[Report-Agent]
+
     C --> |Lädt Rohdaten| C1[SharePoint / Excel / DB]
     C --> |Bereinigt & formatiert| D
     D --> |Berechnet KPIs| D1[Abweichungen<br/>Trends<br/>Prognosen]
     D --> |Ergebnisse| E
-    E --> |Generiert| E1[📋 Executive Summary<br/>📊 Detail-Report<br/>📧 E-Mail Draft]
-    
+    E --> |Generiert| E1[Executive Summary<br/> Detail-Report<br/> E-Mail Draft]
+
     style A fill:#e3f2fd
     style B fill:#fff3e0
     style C fill:#e8f5e9
@@ -359,6 +359,6 @@ Erstelle ein Python-Skript das einen automatisierten Monats-Report generiert.
 
 ---
 
-> **Zurück zur Übersicht:** [🏠 Startseite](index.md) · [Grundlagen (DE)](guide_de.md) · [Grundlagen (EN)](guide_en.md)
+> **Zurück zur Übersicht:** [Startseite](index.md) · [Grundlagen (DE)](guide_de.md) · [Grundlagen (EN)](guide_en.md)
 >
 > Erstellt von **Justin Szczepaniak** · [GitHub-Projekt](https://github.com/justinsz/ProPrompt) · [LinkedIn](https://www.linkedin.com/in/justin-szczepaniak)

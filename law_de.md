@@ -1,8 +1,8 @@
 ---
-title: "⚖️ Juristen & Legal"
+title: "Juristen & Legal"
 layout: default
 nav_order: 2
-parent: "🇩🇪 Grundlagen"
+parent: "Grundlagen"
 ---
 
 # ProPrompt für Juristen & Legal
@@ -24,9 +24,9 @@ parent: "🇩🇪 Grundlagen"
 
 ## 1 Einstieg – Rechtliche Texte mit KI bearbeiten
 
-### Schwierigkeit: ⭐ Leicht
+### Schwierigkeit: * Leicht
 
-> ⚠️ **Wichtiger Hinweis:** KI-Ausgaben sind **keine Rechtsberatung**. Alle Ergebnisse müssen von qualifizierten Juristen geprüft werden. KI unterstützt beim Entwurf, Zusammenfassen und Strukturieren – die juristische Bewertung bleibt beim Menschen.
+> **Wichtiger Hinweis:** KI-Ausgaben sind **keine Rechtsberatung**. Alle Ergebnisse müssen von qualifizierten Juristen geprüft werden. KI unterstützt beim Entwurf, Zusammenfassen und Strukturieren – die juristische Bewertung bleibt beim Menschen.
 
 ### Beispiel – Vertragsklausel verständlich erklären
 
@@ -56,16 +56,16 @@ Gib aus:
 
 | Tipp | Beschreibung |
 |------|-------------|
-| ⚖️ Kontext geben | Rechtsgebiet, Jurisdiktion und Vertragstyp immer angeben |
-| 📋 Quelle einbetten | Klausel oder Gesetzestext direkt im Prompt zitieren |
-| 🎯 Aufgabe eingrenzen | „Analysiere Klausel 5.2" statt „Prüfe den ganzen Vertrag" |
-| ⚠️ KI-Grenzen kennen | Immer als Entwurf / Vorarbeit behandeln, nie als Rechtsberatung |
+| Kontext geben | Rechtsgebiet, Jurisdiktion und Vertragstyp immer angeben |
+| Quelle einbetten | Klausel oder Gesetzestext direkt im Prompt zitieren |
+| Aufgabe eingrenzen | „Analysiere Klausel 5.2" statt „Prüfe den ganzen Vertrag" |
+| KI-Grenzen kennen | Immer als Entwurf / Vorarbeit behandeln, nie als Rechtsberatung |
 
 ---
 
 ## 2 Verträge analysieren & zusammenfassen
 
-### Schwierigkeit: ⭐⭐ Mittel
+### Schwierigkeit: ** Mittel
 
 ### Beispiel – Vertragszusammenfassung strukturiert
 
@@ -79,7 +79,7 @@ eine strukturierte Zusammenfassung:
 
 ## Gewünschtes Format
 
-### 📋 Vertragsübersicht
+### Vertragsübersicht
 | Feld | Inhalt |
 |------|--------|
 | Vertragsparteien | |
@@ -88,13 +88,13 @@ eine strukturierte Zusammenfassung:
 | Vergütung | |
 | Kündigungsfrist | |
 
-### ⚠️ Kritische Klauseln
+### Kritische Klauseln
 - [Klausel + Risikobewertung]
 
-### 🔍 Fehlende Regelungen
+### Fehlende Regelungen
 - [Was fehlt im Vertrag?]
 
-### 💡 Handlungsempfehlungen
+### Handlungsempfehlungen
 - [Priorisierte Empfehlungen]
 ```
 
@@ -116,24 +116,24 @@ Erstelle eine Änderungstabelle:
 | # | Klausel | Version A | Version B | Bewertung | Empfehlung |
 |---|---------|-----------|-----------|-----------|------------|
 
-Bewertung: 🟢 Akzeptabel / 🟡 Verhandelbar / 🔴 Kritisch
+Bewertung: Niedrig Akzeptabel / Mittel Verhandelbar / Hoch Kritisch
 ```
 
 ### Visualisierung – Vertragslebenszyklus
 
 ```mermaid
 flowchart LR
-    A[📝 Entwurf] --> B[🔍 Interne Prüfung]
-    B --> C[📨 Versand an<br/>Gegenpartei]
-    C --> D[🔄 Verhandlung]
+    A[Entwurf] --> B[Interne Prüfung]
+    B --> C[Versand an<br/>Gegenpartei]
+    C --> D[Verhandlung]
     D --> E{Einigung?}
-    E -- Ja --> F[✍️ Unterzeichnung]
+    E -- Ja --> F[Unterzeichnung]
     E -- Nein --> D
-    F --> G[📁 Archivierung]
-    G --> H[⏰ Fristen-<br/>monitoring]
+    F --> G[Archivierung]
+    G --> H[Fristen-<br/>monitoring]
     H --> I{Verlängerung?}
     I -- Ja --> G
-    I -- Nein --> J[📤 Kündigung]
+    I -- Nein --> J[Kündigung]
 
     style A fill:#e3f2fd
     style F fill:#c8e6c9
@@ -145,7 +145,7 @@ flowchart LR
 
 ## 3 Compliance & Regulierung
 
-### Schwierigkeit: ⭐⭐ Mittel
+### Schwierigkeit: ** Mittel
 
 ### Beispiel – DSGVO-Prüfung eines Prozesses
 
@@ -196,7 +196,7 @@ Format als Tabelle, sortiert nach Dringlichkeit.
 
 ## 4 Fortgeschritten – Komplexe rechtliche Analysen
 
-### Schwierigkeit: ⭐⭐⭐ Schwer
+### Schwierigkeit: *** Schwer
 
 ### Beispiel – Multi-Jurisdiktions-Vergleich
 
@@ -204,9 +204,9 @@ Format als Tabelle, sortiert nach Dringlichkeit.
 Du bist ein internationaler Wirtschaftsjurist.
 
 Vergleiche die Regelungen zur Arbeitnehmerüberlassung in:
-- 🇩🇪 Deutschland (AÜG)
-- 🇦🇹 Österreich (AÜG)
-- 🇨🇭 Schweiz (AVG)
+- Deutschland (AÜG)
+- Österreich (AÜG)
+- Schweiz (AVG)
 
 ## Vergleichskriterien
 | Kriterium | DE | AT | CH |
@@ -256,7 +256,7 @@ Für jede Variante:
 
 ## 5 Agent: Automatisierte Vertrags- & Compliance-Prüfung
 
-### Schwierigkeit: ⭐⭐⭐ Schwer
+### Schwierigkeit: *** Schwer
 
 ### Was ist ein Legal-Agent?
 
@@ -282,7 +282,7 @@ der Rechtsabteilung von Contoso GmbH.
 # Verhalten
 - Antworte auf Deutsch
 - Nutze juristische Fachsprache, aber erkläre komplexe Begriffe
-- Bewerte Risiken auf einer Skala: 🟢 Niedrig / 🟡 Mittel / 🔴 Hoch
+- Bewerte Risiken auf einer Skala: Niedrig / Mittel / Hoch
 - Weise IMMER darauf hin, dass die Ergebnisse von einem Juristen geprüft werden müssen
 
 # Prüf-Checkliste
@@ -298,7 +298,7 @@ der Rechtsabteilung von Contoso GmbH.
 10. Compliance-Klausel (Anti-Korruption) enthalten?
 
 # Ausgabeformat
-## 📋 Vertrags-Review: [Vertragsname]
+## Vertrags-Review: [Vertragsname]
 
 ### Zusammenfassung
 [2-3 Sätze]
@@ -307,14 +307,14 @@ der Rechtsabteilung von Contoso GmbH.
 | # | Prüfpunkt | Status | Kommentar |
 |---|-----------|--------|-----------|
 
-### ⚠️ Top-Risiken
+### Top-Risiken
 1. [Risiko + Empfehlung]
 
-### ✅ Nächste Schritte
+### Nächste Schritte
 1. [Aktion + Verantwortlicher]
 
 ---
-⚖️ *Hinweis: Diese Analyse ersetzt keine Rechtsberatung.
+ *Hinweis: Diese Analyse ersetzt keine Rechtsberatung.
 Bitte lassen Sie alle Ergebnisse von einem qualifizierten
 Juristen prüfen.*
 ```
@@ -323,23 +323,23 @@ Juristen prüfen.*
 
 ```mermaid
 flowchart TB
-    A[📄 Neuer Vertrag<br/>eingegangenk] --> B[🤖 Orchestrator]
-    
-    B --> C[📝 Extraktions-Agent]
-    B --> D[⚖️ Prüfungs-Agent]
-    B --> E[📊 Risiko-Agent]
-    
+    A[Neuer Vertrag<br/>eingegangenk] --> B[Orchestrator]
+
+    B --> C[Extraktions-Agent]
+    B --> D[Prüfungs-Agent]
+    B --> E[Risiko-Agent]
+
     C --> |Extrahiert Kerndaten| C1[Parteien, Laufzeit,<br/>Werte, Fristen]
     C --> D
-    D --> |Prüft gegen<br/>Klausel-Bibliothek| D1[✅ Vorhanden<br/>⚠️ Fehlt<br/>🔴 Kritisch]
+    D --> |Prüft gegen<br/>Klausel-Bibliothek| D1[Vorhanden<br/> Fehlt<br/>Hoch Kritisch]
     D --> E
     E --> |Bewertet Risiken| E1[Risikoklassen<br/>Impact-Analyse<br/>Empfehlungen]
-    E --> F[📋 Review-Report]
+    E --> F[Review-Report]
     F --> G{Risiko-Level?}
-    G -- 🟢 Niedrig --> H[✅ Freigabe-Empfehlung]
-    G -- 🟡 Mittel --> I[⚠️ Nachverhandlung empfohlen]
-    G -- 🔴 Hoch --> J[🚨 Eskalation an<br/>Head of Legal]
-    
+    G -- Niedrig --> H[Freigabe-Empfehlung]
+    G -- Mittel --> I[Nachverhandlung empfohlen]
+    G -- Hoch --> J[Eskalation an<br/>Head of Legal]
+
     style A fill:#e3f2fd
     style F fill:#fff3e0
     style H fill:#c8e6c9
@@ -402,8 +402,8 @@ eine Prüf-Checkliste analysiert.
 
 ---
 
-> ⚖️ **Haftungshinweis:** Alle KI-generierten rechtlichen Inhalte sind unverbindlich und ersetzen keine qualifizierte Rechtsberatung.
+> **Haftungshinweis:** Alle KI-generierten rechtlichen Inhalte sind unverbindlich und ersetzen keine qualifizierte Rechtsberatung.
 
-> **Zurück zur Übersicht:** [🏠 Startseite](index.md) · [Grundlagen (DE)](guide_de.md) · [Grundlagen (EN)](guide_en.md)
+> **Zurück zur Übersicht:** [Startseite](index.md) · [Grundlagen (DE)](guide_de.md) · [Grundlagen (EN)](guide_en.md)
 >
 > Erstellt von **Justin Szczepaniak** · [GitHub-Projekt](https://github.com/justinsz/ProPrompt) · [LinkedIn](https://www.linkedin.com/in/justin-szczepaniak)
