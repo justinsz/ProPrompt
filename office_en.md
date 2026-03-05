@@ -254,14 +254,15 @@ LLMs cannot directly read `.docx`, `.xlsx`, or `.pptx` files. Here are the key c
 
 ### Quick Reference
 
-| Source | Target | Tool (no Python needed) |
-|--------|--------|-------------------------|
-| Word (.docx) | Markdown | Pandoc (CLI) |
-| Excel (.xlsx) | CSV | "Save As" → CSV in Excel |
-| PowerPoint (.pptx) | Text / Markdown | LibreOffice CLI or Copy & Paste |
-| PDF | Text | Online tools or Pandoc |
+| Source | Target | Tool |
+|--------|--------|------|
+| Word (.docx) | Markdown | Pandoc |
+| Excel (.xlsx) | CSV | Save As → CSV **or** Pandoc |
+| PowerPoint (.pptx) | Markdown | Pandoc **or** PDF export → Pandoc |
+| PDF | Text / Markdown | Pandoc **or** pdftotext |
 
-> 💡 **Tip:** All methods work without any programming knowledge.
+> 💡 **Tip:** Everything works with a single tool – [Pandoc](https://pandoc.org) (free, no Python needed).
+> Many AI tools (ChatGPT, Claude, Gemini) also accept `.pptx` uploads directly.
 
 ### Word → Markdown (Pandoc)
 
@@ -271,39 +272,51 @@ Pandoc is a free command-line tool ([pandoc.org](https://pandoc.org)):
 pandoc input.docx -t markdown -o output.md
 ```
 
-### Excel → CSV (Built-in)
+### Excel → CSV
 
-No extra tools needed – directly in Excel:
+**Option 1 – Built into Excel:**
 
 1. Open file → **File → Save As**
 2. Choose format: **CSV (Comma delimited)**
 3. Save – done
 
-Alternatively via LibreOffice command line:
+**Option 2 – Pandoc (even without Excel installed):**
 
 ```bash
-libreoffice --headless --convert-to csv data.xlsx
+pandoc data.xlsx -t markdown -o data.md
 ```
 
-> 💡 For Markdown tables: paste CSV into the AI and prompt:
-> *"Convert this CSV data into a Markdown table."*
+> 💡 Pandoc can read `.xlsx` directly and output it as a Markdown table.
 
-### PowerPoint → Text (Copy & Paste or LibreOffice)
+### PowerPoint → Markdown
 
-**Simplest way:** Select slides → copy text → paste into AI.
+**Option 1 – Pandoc (recommended):**
 
-**Automated via LibreOffice:**
+Pandoc can read `.pptx` files directly and extract slide content as Markdown:
 
 ```bash
-libreoffice --headless --convert-to txt presentation.pptx
+pandoc presentation.pptx -t markdown -o presentation.md
 ```
 
-**Or via PDF intermediate step:**
+**Option 2 – PDF intermediate step (better formatting for complex slides):**
+
+In PowerPoint: **File → Export → Create PDF**, then:
 
 ```bash
-libreoffice --headless --convert-to pdf presentation.pptx
 pandoc presentation.pdf -t markdown -o presentation.md
 ```
+
+**Option 3 – Direct upload:**
+
+Many AI tools accept `.pptx` files directly:
+- ChatGPT (Plus/Team/Enterprise)
+- Claude (Pro)
+- Google Gemini
+
+Simply upload the file and prompt: *"Summarize this presentation."*
+
+> 💡 **Tip for large presentations:** If the result is incomplete, convert
+> via the PDF route first – this usually provides the most complete extraction.
 
 ### PDF → Text
 
@@ -337,8 +350,8 @@ flowchart LR
     B --> F[PDF]
 
     C --> G[Pandoc]
-    D --> H[Save As CSV]
-    E --> I[LibreOffice CLI]
+    D --> H[Save As CSV<br/>or Pandoc]
+    E --> I[Pandoc directly<br/>or PDF export]
     F --> J[Pandoc / pdftotext]
 
     G & H & I & J --> K[Markdown / CSV / Text]

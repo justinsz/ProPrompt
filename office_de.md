@@ -255,14 +255,15 @@ LLMs können keine `.docx`, `.xlsx` oder `.pptx` direkt lesen. Hier die wichtigs
 
 ### Schnellübersicht
 
-| Quelle | Ziel | Tool (kein Python nötig) |
-|--------|------|-------------------------|
-| Word (.docx) | Markdown | Pandoc (CLI) |
-| Excel (.xlsx) | CSV | "Speichern unter" → CSV in Excel |
-| PowerPoint (.pptx) | Text / Markdown | LibreOffice CLI oder Copy & Paste |
-| PDF | Text | Online-Tools oder Pandoc |
+| Quelle | Ziel | Tool |
+|--------|------|------|
+| Word (.docx) | Markdown | Pandoc |
+| Excel (.xlsx) | CSV | Speichern unter → CSV **oder** Pandoc |
+| PowerPoint (.pptx) | Markdown | Pandoc **oder** PDF-Export → Pandoc |
+| PDF | Text / Markdown | Pandoc **oder** pdftotext |
 
-> 💡 **Tipp:** Alle Wege funktionieren ohne Programmierkenntnisse.
+> 💡 **Tipp:** Alles funktioniert mit einem einzigen Tool – [Pandoc](https://pandoc.org) (kostenlos, kein Python nötig).
+> Viele KI-Tools (ChatGPT, Claude, Gemini) akzeptieren `.pptx`-Uploads auch direkt.
 
 ### Word → Markdown (Pandoc)
 
@@ -272,39 +273,51 @@ Pandoc ist ein kostenloses Kommandozeilen-Tool ([pandoc.org](https://pandoc.org)
 pandoc input.docx -t markdown -o output.md
 ```
 
-### Excel → CSV (Bordmittel)
+### Excel → CSV
 
-Kein Tool nötig – direkt in Excel:
+**Option 1 – Bordmittel in Excel:**
 
 1. Datei öffnen → **Datei → Speichern unter**
 2. Format wählen: **CSV (Trennzeichen-getrennt)**
 3. Speichern – fertig
 
-Alternativ per LibreOffice-Kommandozeile:
+**Option 2 – Pandoc (auch ohne Excel installiert):**
 
 ```bash
-libreoffice --headless --convert-to csv data.xlsx
+pandoc data.xlsx -t markdown -o data.md
 ```
 
-> 💡 Für Markdown-Tabellen: CSV in die KI einfügen und prompten:
-> *"Wandle diese CSV-Daten in eine Markdown-Tabelle um."*
+> 💡 Pandoc kann `.xlsx` direkt lesen und als Markdown-Tabelle ausgeben.
 
-### PowerPoint → Text (Copy & Paste oder LibreOffice)
+### PowerPoint → Markdown
 
-**Einfachster Weg:** Folien markieren → Text kopieren → in KI einfügen.
+**Option 1 – Pandoc (empfohlen):**
 
-**Automatisiert per LibreOffice:**
+Pandoc kann `.pptx`-Dateien direkt lesen und den Folieninhalt als Markdown extrahieren:
 
 ```bash
-libreoffice --headless --convert-to txt presentation.pptx
+pandoc presentation.pptx -t markdown -o presentation.md
 ```
 
-**Oder als PDF-Zwischenschritt:**
+**Option 2 – PDF-Zwischenschritt (bessere Formatierung bei komplexen Folien):**
+
+In PowerPoint: **Datei → Exportieren → PDF erstellen**, dann:
 
 ```bash
-libreoffice --headless --convert-to pdf presentation.pptx
 pandoc presentation.pdf -t markdown -o presentation.md
 ```
+
+**Option 3 – Direkter Upload:**
+
+Viele KI-Tools akzeptieren `.pptx`-Dateien direkt:
+- ChatGPT (Plus/Team/Enterprise)
+- Claude (Pro)
+- Google Gemini
+
+Einfach die Datei hochladen und prompten: *„Fasse diese Präsentation zusammen.“*
+
+> 💡 **Tipp für große Präsentationen:** Wenn das Ergebnis unvollständig ist, konvertiere
+> zuerst über den PDF-Weg – das liefert in der Regel die vollständigste Extraktion.
 
 ### PDF → Text
 
@@ -338,8 +351,8 @@ flowchart LR
     B --> F[PDF]
 
     C --> G[Pandoc]
-    D --> H[Speichern als CSV]
-    E --> I[LibreOffice CLI]
+    D --> H[Speichern als CSV<br/>oder Pandoc]
+    E --> I[Pandoc direkt<br/>oder PDF-Export]
     F --> J[Pandoc / pdftotext]
 
     G & H & I & J --> K[Markdown / CSV / Text]
