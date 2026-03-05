@@ -1,8 +1,8 @@
 ---
-title: "Entwickler"
+title: "💻 Entwickler"
 layout: default
 nav_order: 3
-parent: "Grundlagen"
+parent: "🇩🇪 Grundlagen"
 ---
 
 # ProPrompt für Entwickler
@@ -24,7 +24,7 @@ parent: "Grundlagen"
 
 ## 1 Einstieg – Dein erster Code-Prompt
 
-### Schwierigkeit: * Leicht
+### Schwierigkeit: ⭐ Leicht
 
 Das RICE-Prinzip gilt auch beim Coden – siehe [Grundlagen](guide_de.md#2-grundlagen-des-promptings).
 
@@ -68,7 +68,7 @@ Gib die Funktion mit JSDoc-Kommentaren und 3 Beispiel-Aufrufen aus.
 
 ## 2 Code schreiben & refactoren
 
-### Schwierigkeit: ** Mittel
+### Schwierigkeit: ⭐⭐ Mittel
 
 ### Beispiel – Refactoring mit klaren Constraints
 
@@ -167,7 +167,7 @@ flowchart TB
 
 ## 3 Debugging & Code-Review
 
-### Schwierigkeit: ** Mittel
+### Schwierigkeit: ⭐⭐ Mittel
 
 ### Beispiel – Systematisches Debugging
 
@@ -213,22 +213,22 @@ Für jedes Finding:
 
 ```mermaid
 flowchart TD
-    A[Fehler aufgetreten] --> B{Fehlertyp?}
+    A[🐛 Fehler aufgetreten] --> B{Fehlertyp?}
 
-    B --> C[Hoch Compile-Error]
-    B --> D[Runtime-Error]
-    B --> E[Mittel Logic-Error]
+    B --> C[🔴 Compile-Error]
+    B --> D[🟠 Runtime-Error]
+    B --> E[🟡 Logic-Error]
 
-    C --> C1[Typfehler prüfen<br/>`/fix` nutzen]
+    C --> C1["Typfehler prüfen<br/>/fix nutzen"]
     D --> D1[Stack-Trace lesen<br/>Breakpoints setzen]
     E --> E1[Tests schreiben<br/>Input/Output vergleichen]
 
-    C1 --> F[Lösung gefunden?]
+    C1 --> F[💡 Lösung gefunden?]
     D1 --> F
     E1 --> F
 
-    F -- Ja --> G[Fix anwenden & testen]
-    F -- Nein --> H[Agent-Modus nutzen<br/>mit vollem Kontext]
+    F -- Ja --> G[✅ Fix anwenden & testen]
+    F -- Nein --> H[🤖 Agent-Modus nutzen<br/>mit vollem Kontext]
 
     style C fill:#ffcdd2
     style D fill:#ffe0b2
@@ -240,7 +240,7 @@ flowchart TD
 
 ## 4 Fortgeschritten – Architektur & komplexe Features
 
-### Schwierigkeit: *** Schwer
+### Schwierigkeit: ⭐⭐⭐ Schwer
 
 ### Beispiel – System-Design mit KI
 
@@ -300,20 +300,20 @@ Gib das Dockerfile mit Kommentaren für jeden Schritt aus.
 
 ## 5 Agent: Autonome Entwicklung im Agent-Modus
 
-### Schwierigkeit: *** Schwer
+### Schwierigkeit: ⭐⭐⭐ Schwer
 
 ### Was kann der Agent-Modus?
 
 ```mermaid
 flowchart LR
-    A[Entwickler<br/>gibt Prompt] --> B[Agent]
-    B --> C[Dateien lesen]
-    B --> D[Code schreiben]
-    B --> E[Terminal nutzen]
-    B --> F[Fehler finden]
+    A[🧑‍💻 Entwickler<br/>gibt Prompt] --> B[🤖 Agent]
+    B --> C[📁 Dateien lesen]
+    B --> D[✏️ Code schreiben]
+    B --> E[🖥️ Terminal nutzen]
+    B --> F[🔍 Fehler finden]
 
-    C & D & E & F --> G[Iterieren<br/>bis Ziel erreicht]
-    G --> H[Ergebnis<br/>zur Review]
+    C & D & E & F --> G[🔄 Iterieren<br/>bis Ziel erreicht]
+    G --> H[✅ Ergebnis<br/>zur Review]
 
     style A fill:#e3f2fd
     style B fill:#fff3e0
@@ -322,15 +322,15 @@ flowchart LR
 
 ### Wann Agent vs. Chat?
 
-| Szenario | Agent | Chat |
+| Szenario | Agent ✅ | Chat 💬 |
 |----------|---------|---------|
-| Feature über mehrere Dateien | Ja | |
-| Ganzes Modul refactoren | Ja | |
-| Debugging mit Terminal | Ja | |
-| CI/CD-Pipeline aufsetzen | Ja | |
-| Einzelne Funktion schreiben | | reicht |
-| Code erklären lassen | | reicht |
-| Schneller Regex | | reicht |
+| Feature über mehrere Dateien | ✅ | |
+| Ganzes Modul refactoren | ✅ | |
+| Debugging mit Terminal | ✅ | |
+| CI/CD-Pipeline aufsetzen | ✅ | |
+| Einzelne Funktion schreiben | | 💬 reicht |
+| Code erklären lassen | | 💬 reicht |
+| Schneller Regex | | 💬 reicht |
 
 ### Beispiel – Agent-Prompt: Neues Feature
 
@@ -372,12 +372,12 @@ Implementiere ein Benutzer-Authentifizierungssystem mit JWT.
 
 | Tipp | Beschreibung |
 |------|-------------|
-| Instruction Files | `.github/copilot-instructions.md` wird automatisch geladen |
-| Scope begrenzen | 3 fokussierte Sessions > 1 riesige Session |
-| Checkpoints | Nach jedem Schritt Changes reviewen |
-| Terminal beobachten | Agent führt Befehle aus – Nebeneffekte möglich |
+| 📋 Instruction Files | `.github/copilot-instructions.md` wird automatisch geladen |
+| 🎯 Scope begrenzen | 3 fokussierte Sessions > 1 riesige Session |
+| 🔍 Checkpoints | Nach jedem Schritt Changes reviewen |
+| 🖥️ Terminal beobachten | Agent führt Befehle aus – Nebeneffekte möglich |
 | ↩ Undo nutzen | VS Code kann Agent-Änderungen rückgängig machen |
-| Kontext mitgeben | Relevante Dateien mit `#file:` referenzieren |
+| 📝 Kontext mitgeben | Relevante Dateien mit `#file:` referenzieren |
 
 ---
 
@@ -422,6 +422,6 @@ Implementiere ein Benutzer-Authentifizierungssystem mit JWT.
 
 ---
 
-> **Zurück zur Übersicht:** [Startseite](index.md) · [Grundlagen (DE)](guide_de.md) · [Grundlagen (EN)](guide_en.md)
+> **Zurück zur Übersicht:** [🏠 Startseite](index.md) · [Grundlagen (DE)](guide_de.md) · [Grundlagen (EN)](guide_en.md)
 >
 > Erstellt von **Justin Szczepaniak** · [GitHub-Projekt](https://github.com/justinsz/ProPrompt) · [LinkedIn](https://www.linkedin.com/in/justin-szczepaniak)

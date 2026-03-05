@@ -1,8 +1,8 @@
 ---
-title: "Office Work"
+title: "🏢 Office Work"
 layout: default
 nav_order: 4
-parent: "Fundamentals"
+parent: "🇬🇧 Fundamentals"
 ---
 
 # ProPrompt for Everyday Office Work
@@ -25,7 +25,7 @@ parent: "Fundamentals"
 
 ## 1 Getting Started – AI in Your Workday
 
-### Difficulty: * Easy
+### Difficulty: ⭐ Easy
 
 You don't need technical knowledge to use AI productively. The secret: **give clear instructions** – just like you would to a new colleague.
 
@@ -45,17 +45,17 @@ Language: English, professional tone.
 
 | Rule | Description |
 |------|-------------|
-| Be specific | "Create a 3-sentence summary" instead of "Summarize this" |
-| Name your audience | Who is the output for? Management? Clients? Team? |
-| Define the format | Table, bullet points, prose, email format |
-| Set the tone | Formal, informal, friendly, matter-of-fact |
-| Iterate | Result not perfect? Refine the prompt |
+| 🎯 Be specific | "Create a 3-sentence summary" instead of "Summarize this" |
+| 👥 Name your audience | Who is the output for? Management? Clients? Team? |
+| 📝 Define the format | Table, bullet points, prose, email format |
+| 🎤 Set the tone | Formal, informal, friendly, matter-of-fact |
+| 🔄 Iterate | Result not perfect? Refine the prompt |
 
 ---
 
 ## 2 Emails & Communication
 
-### Difficulty: * Easy
+### Difficulty: ⭐ Easy
 
 ### Example – Drafting a Professional Email
 
@@ -103,7 +103,7 @@ Provide 2 variants: one for internal communication, one for the client.
 
 ```mermaid
 flowchart LR
-    A[Draft] --> B{Audience?}
+    A[📝 Draft] --> B{Audience?}
     B --> C[Internal]
     B --> D[Client]
     B --> E[Public]
@@ -124,7 +124,7 @@ flowchart LR
 
 ## 3 Meetings & Minutes
 
-### Difficulty: ** Medium
+### Difficulty: ⭐⭐ Medium
 
 ### Example – Creating a Meeting Agenda
 
@@ -186,7 +186,7 @@ Create professional meeting minutes from the following rough notes:
 
 ## 4 Documents & Presentations
 
-### Difficulty: ** Medium
+### Difficulty: ⭐⭐ Medium
 
 ### Example – Creating a Presentation Outline
 
@@ -248,7 +248,7 @@ flowchart LR
 
 ## 5 Converting Office Files to AI-Friendly Formats
 
-### Difficulty: *** Hard
+### Difficulty: ⭐⭐⭐ Hard
 
 LLMs cannot directly read `.docx`, `.xlsx`, or `.pptx` files. Here are the key conversion paths:
 
@@ -332,7 +332,7 @@ flowchart LR
 
 ## 6 Agent: Office Assistant & Helpdesk
 
-### Difficulty: *** Hard
+### Difficulty: ⭐⭐⭐ Hard
 
 ### What Is an Office Agent?
 
@@ -459,6 +459,6 @@ flowchart TB
 
 ---
 
-> **Back to overview:** [Home](index.md) · [Fundamentals (DE)](guide_de.md) · [Fundamentals (EN)](guide_en.md)
+> **Back to overview:** [🏠 Home](index.md) · [Fundamentals (DE)](guide_de.md) · [Fundamentals (EN)](guide_en.md)
 >
 > Created by **Justin Szczepaniak** · [GitHub Project](https://github.com/justinsz/ProPrompt) · [LinkedIn](https://www.linkedin.com/in/justin-szczepaniak)

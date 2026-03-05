@@ -1,8 +1,8 @@
 ---
-title: "Büroalltag"
+title: "🏢 Büroalltag"
 layout: default
 nav_order: 4
-parent: "Grundlagen"
+parent: "🇩🇪 Grundlagen"
 ---
 
 # ProPrompt für den Büroalltag
@@ -25,7 +25,7 @@ parent: "Grundlagen"
 
 ## 1 Einstieg – KI im Arbeitsalltag
 
-### Schwierigkeit: * Leicht
+### Schwierigkeit: ⭐ Leicht
 
 Du brauchst kein technisches Vorwissen, um KI produktiv zu nutzen. Das Geheimnis: **klare Anweisungen geben** – genau wie an einen neuen Kollegen.
 
@@ -46,16 +46,16 @@ Sprache: Deutsch, professioneller Ton.
 | Regel | Beschreibung |
 |-------|-------------|
 | Klar formulieren | „Erstelle eine 3-Sätze-Zusammenfassung" statt „Fass mal zusammen" |
-| Zielgruppe nennen | Für wen ist der Output? Management? Kunden? Team? |
-| Format vorgeben | Tabelle, Bullet Points, Fließtext, E-Mail-Format |
-| Ton bestimmen | Formell, informell, freundlich, sachlich |
-| Iterieren | Ergebnis nicht perfekt? Verfeinere den Prompt |
+| 🎯 Zielgruppe nennen | Für wen ist der Output? Management? Kunden? Team? |
+| 📝 Format vorgeben | Tabelle, Bullet Points, Fließtext, E-Mail-Format |
+| 🎤 Ton bestimmen | Formell, informell, freundlich, sachlich |
+| 🔄 Iterieren | Ergebnis nicht perfekt? Verfeinere den Prompt |
 
 ---
 
 ## 2 E-Mails & Kommunikation
 
-### Schwierigkeit: * Leicht
+### Schwierigkeit: ⭐ Leicht
 
 ### Beispiel – Professionelle E-Mail verfassen
 
@@ -103,7 +103,7 @@ Gib 2 Varianten: eine für interne Kommunikation, eine für den Kunden.
 
 ```mermaid
 flowchart LR
-    A[Entwurf] --> B{Zielgruppe?}
+    A[📝 Entwurf] --> B{Zielgruppe?}
     B --> C[Intern]
     B --> D[Kunde]
     B --> E[Öffentlich]
@@ -124,7 +124,7 @@ flowchart LR
 
 ## 3 Meetings & Protokolle
 
-### Schwierigkeit: ** Mittel
+### Schwierigkeit: ⭐⭐ Mittel
 
 ### Beispiel – Meeting-Agenda erstellen
 
@@ -187,7 +187,7 @@ Stichpunkten:
 
 ## 4 Dokumente & Präsentationen
 
-### Schwierigkeit: ** Mittel
+### Schwierigkeit: ⭐⭐ Mittel
 
 ### Beispiel – Präsentations-Gliederung erstellen
 
@@ -249,7 +249,7 @@ flowchart LR
 
 ## 5 Office-Dateien in KI-freundliche Formate umwandeln
 
-### Schwierigkeit: *** Schwer
+### Schwierigkeit: ⭐⭐⭐ Schwer
 
 LLMs können keine `.docx`, `.xlsx` oder `.pptx` direkt lesen. Hier die wichtigsten Konvertierungswege:
 
@@ -333,7 +333,7 @@ flowchart LR
 
 ## 6 Agent: Büroassistent & Helpdesk
 
-### Schwierigkeit: *** Schwer
+### Schwierigkeit: ⭐⭐⭐ Schwer
 
 ### Was ist ein Büro-Agent?
 
@@ -460,6 +460,6 @@ flowchart TB
 
 ---
 
-> **Zurück zur Übersicht:** [Startseite](index.md) · [Grundlagen (DE)](guide_de.md) · [Grundlagen (EN)](guide_en.md)
+> **Zurück zur Übersicht:** [🏠 Startseite](index.md) · [Grundlagen (DE)](guide_de.md) · [Grundlagen (EN)](guide_en.md)
 >
 > Erstellt von **Justin Szczepaniak** · [GitHub-Projekt](https://github.com/justinsz/ProPrompt) · [LinkedIn](https://www.linkedin.com/in/justin-szczepaniak)

@@ -1,8 +1,8 @@
 ---
-title: "Developers"
+title: "💻 Developers"
 layout: default
 nav_order: 3
-parent: "Fundamentals"
+parent: "🇬🇧 Fundamentals"
 ---
 
 # ProPrompt for Developers
@@ -24,7 +24,7 @@ parent: "Fundamentals"
 
 ## 1 Getting Started – Your First Code Prompt
 
-### Difficulty: * Easy
+### Difficulty: ⭐ Easy
 
 The RICE framework applies to coding too – see [Fundamentals](guide_en.md#2-prompting-fundamentals).
 
@@ -68,7 +68,7 @@ Output the function with JSDoc comments and 3 example calls.
 
 ## 2 Writing & Refactoring Code
 
-### Difficulty: ** Medium
+### Difficulty: ⭐⭐ Medium
 
 ### Example – Refactoring with Clear Constraints
 
@@ -167,7 +167,7 @@ flowchart TB
 
 ## 3 Debugging & Code Review
 
-### Difficulty: ** Medium
+### Difficulty: ⭐⭐ Medium
 
 ### Example – Systematic Debugging
 
@@ -213,22 +213,22 @@ For each finding:
 
 ```mermaid
 flowchart TD
-    A[Error Occurred] --> B{Error Type?}
+    A[🐛 Error Occurred] --> B{Error Type?}
 
-    B --> C[High Compile Error]
-    B --> D[Runtime Error]
-    B --> E[Medium Logic Error]
+    B --> C[🔴 Compile Error]
+    B --> D[🟠 Runtime Error]
+    B --> E[🟡 Logic Error]
 
-    C --> C1[Check types<br/>Use `/fix`]
+    C --> C1["Check types<br/>Use /fix"]
     D --> D1[Read stack trace<br/>Set breakpoints]
     E --> E1[Write tests<br/>Compare input/output]
 
-    C1 --> F[Solution Found?]
+    C1 --> F[💡 Solution Found?]
     D1 --> F
     E1 --> F
 
-    F -- Yes --> G[Apply fix & test]
-    F -- No --> H[Use Agent Mode<br/>with full context]
+    F -- Yes --> G[✅ Apply fix & test]
+    F -- No --> H[🤖 Use Agent Mode<br/>with full context]
 
     style C fill:#ffcdd2
     style D fill:#ffe0b2
@@ -240,7 +240,7 @@ flowchart TD
 
 ## 4 Advanced – Architecture & Complex Features
 
-### Difficulty: *** Hard
+### Difficulty: ⭐⭐⭐ Hard
 
 ### Example – System Design with AI
 
@@ -300,20 +300,20 @@ Output the Dockerfile with comments for each step.
 
 ## 5 Agent: Autonomous Development in Agent Mode
 
-### Difficulty: *** Hard
+### Difficulty: ⭐⭐⭐ Hard
 
 ### What Can Agent Mode Do?
 
 ```mermaid
 flowchart LR
-    A[Developer<br/>gives prompt] --> B[Agent]
-    B --> C[Read files]
-    B --> D[Write code]
-    B --> E[Run terminal]
-    B --> F[Find errors]
+    A[🧑‍💻 Developer<br/>gives prompt] --> B[🤖 Agent]
+    B --> C[📁 Read files]
+    B --> D[✏️ Write code]
+    B --> E[🖥️ Run terminal]
+    B --> F[🔍 Find errors]
 
-    C & D & E & F --> G[Iterate<br/>until goal met]
-    G --> H[Result<br/>for review]
+    C & D & E & F --> G[🔄 Iterate<br/>until goal met]
+    G --> H[✅ Result<br/>for review]
 
     style A fill:#e3f2fd
     style B fill:#fff3e0
@@ -322,15 +322,15 @@ flowchart LR
 
 ### When Agent vs. Chat?
 
-| Scenario | Agent | Chat |
+| Scenario | Agent ✅ | Chat 💬 |
 |----------|---------|---------|
-| Feature across multiple files | Yes | |
-| Refactor entire module | Yes | |
-| Debugging with terminal | Yes | |
-| Set up CI/CD pipeline | Yes | |
-| Write a single function | | suffices |
-| Get code explanation | | suffices |
-| Quick regex | | suffices |
+| Feature across multiple files | ✅ | |
+| Refactor entire module | ✅ | |
+| Debugging with terminal | ✅ | |
+| Set up CI/CD pipeline | ✅ | |
+| Write a single function | | 💬 suffices |
+| Get code explanation | | 💬 suffices |
+| Quick regex | | 💬 suffices |
 
 ### Example – Agent Prompt: New Feature
 
@@ -372,12 +372,12 @@ Implement a user authentication system with JWT.
 
 | Tip | Description |
 |-----|-------------|
-| Instruction files | `.github/copilot-instructions.md` is loaded automatically |
-| Limit scope | 3 focused sessions > 1 massive session |
-| Checkpoints | Review changes after each step |
-| Watch terminal | Agent runs commands – side effects possible |
+| 📋 Instruction files | `.github/copilot-instructions.md` is loaded automatically |
+| 🎯 Limit scope | 3 focused sessions > 1 massive session |
+| 🔍 Checkpoints | Review changes after each step |
+| 🖥️ Watch terminal | Agent runs commands – side effects possible |
 | ↩ Use undo | VS Code can revert agent changes |
-| Provide context | Reference relevant files with `#file:` |
+| ⚖️ Provide context | Reference relevant files with `#file:` |
 
 ---
 
@@ -422,6 +422,6 @@ Implement a user authentication system with JWT.
 
 ---
 
-> **Back to overview:** [Home](index.md) · [Fundamentals (DE)](guide_de.md) · [Fundamentals (EN)](guide_en.md)
+> **Back to overview:** [🏠 Home](index.md) · [Fundamentals (DE)](guide_de.md) · [Fundamentals (EN)](guide_en.md)
 >
 > Created by **Justin Szczepaniak** · [GitHub Project](https://github.com/justinsz/ProPrompt) · [LinkedIn](https://www.linkedin.com/in/justin-szczepaniak)

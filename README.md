@@ -1,4 +1,4 @@
-# ProPrompt
+# 🚀 ProPrompt
 
 **The ultimate guide to effective AI prompting – for GitHub Copilot, Copilot Studio Agents & Agent Toolchains.**
 
@@ -11,7 +11,7 @@ The full documentation is available as a website – with navigation, search, an
 
 ---
 
-## Structure
+## 📖 Structure
 
 ### Fundamentals (Start Here)
 
@@ -24,18 +24,18 @@ The full documentation is available as a website – with navigation, search, an
 
 | Guide | Deutsch | English |
 |-------|------------|------------|
-| Analysts | [Analysten](https://justinsz.github.io/ProPrompt/analysts_de.html) | [Analysts](https://justinsz.github.io/ProPrompt/analysts_en.html) |
-| Legal | [Juristen & Legal](https://justinsz.github.io/ProPrompt/law_de.html) | [Legal](https://justinsz.github.io/ProPrompt/law_en.html) |
-| Developers | [Entwickler](https://justinsz.github.io/ProPrompt/coders_de.html) | [Developers](https://justinsz.github.io/ProPrompt/coders_en.html) |
-| Office | [Büroalltag](https://justinsz.github.io/ProPrompt/office_de.html) | [Office Work](https://justinsz.github.io/ProPrompt/office_en.html) |
+| 📊 Analysts | [Analysten](https://justinsz.github.io/ProPrompt/analysts_de.html) | [Analysts](https://justinsz.github.io/ProPrompt/analysts_en.html) |
+| ⚖️ Legal | [Juristen & Legal](https://justinsz.github.io/ProPrompt/law_de.html) | [Legal](https://justinsz.github.io/ProPrompt/law_en.html) |
+| 💻 Developers | [Entwickler](https://justinsz.github.io/ProPrompt/coders_de.html) | [Developers](https://justinsz.github.io/ProPrompt/coders_en.html) |
+| 🏢 Office | [Büroalltag](https://justinsz.github.io/ProPrompt/office_de.html) | [Office Work](https://justinsz.github.io/ProPrompt/office_en.html) |
 
 ---
 
-## What's Inside Each Guide?
+## 🎯 What's Inside Each Guide?
 
 Every job-specific guide includes:
 
-- **Difficulty levels** – Ordered from * Easy to *** Hard
+- **Difficulty levels** – Ordered from ⭐ Easy to ⭐⭐⭐ Hard
 - **Prompt examples** – At least one ready-to-use prompt per section
 - **Agent examples** – Copilot Studio agent templates & VS Code agent prompts
 - **Mermaid diagrams** – Visual process flows and architectures
@@ -58,7 +58,7 @@ flowchart LR
     style F fill:#fff9c4
 ```
 
-## Who Is This For?
+## 👥 Who Is This For?
 
 | Role | Start With |
 |------|-----------|
@@ -68,7 +68,7 @@ flowchart LR
 | PM / Assistant / HR / Marketing | [Fundamentals](guide_en.md) → [Office Guide](office_en.md) |
 | Everyone | [Fundamentals](guide_en.md) to learn the RICE framework & Dos/Don'ts |
 
-## Quick Start
+## 🏁 Quick Start
 
 1. **[Open the website](https://justinsz.github.io/ProPrompt/)** for the best reading experience
 2. Read the **Fundamentals** guide first (RICE principle, Dos & Don'ts)
@@ -76,22 +76,22 @@ flowchart LR
 4. Use the **Cheat Sheet** templates in your daily work
 5. Set up your `.github/copilot-instructions.md` for project-wide AI rules
 
-## Contributing
+## 🤝 Contributing
 
 Contributions are welcome! Feel free to:
 - Open an **Issue** for suggestions or corrections
 - Submit a **Pull Request** with improvements
 - Share your own prompt templates
 
-## Author
+## 👤 Author
 
 **Justin Szczepaniak**
 [GitHub](https://github.com/justinsz) · [LinkedIn](https://www.linkedin.com/in/justin-szczepaniak)
 
-## License
+## 📄 License
 
 MIT – Free to use, modify, and distribute.
 
 ---
 
-*Built with by [Justin Szczepaniak](https://github.com/justinsz)*
+*Built with ❤️ by [Justin Szczepaniak](https://github.com/justinsz)*

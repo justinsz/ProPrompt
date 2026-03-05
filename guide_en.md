@@ -1,5 +1,5 @@
 ---
-title: "Fundamentals"
+title: "🇬🇧 Fundamentals"
 layout: default
 nav_order: 3
 has_children: true
@@ -117,7 +117,7 @@ Expected: Multi-stage Dockerfile with comments.
 
 ## 3 Dos & Don'ts – Overview
 
-### DOs
+### ✅ DOs
 
 | # | Do | Why |
 |---|-----|-----|
@@ -132,7 +132,7 @@ Expected: Multi-stage Dockerfile with comments.
 | 9 | **Review the output** | Always review AI output, never blindly accept |
 | 10 | **Use Custom Instructions** | `.github/copilot-instructions.md` for project-wide rules |
 
-### DON'Ts
+### ❌ DON'Ts
 
 | # | Don't | Why |
 |---|-------|-----|
@@ -188,7 +188,7 @@ The following error occurred: #terminalLastCommand
 Analyze the error in the context of #file:src/app.ts and suggest a fix.
 ```
 
-> **More examples in the job-specific guides:**
+> 💡 **More examples in the job-specific guides:**
 > [Analysts](analysts_en.md) · [Legal](law_en.md) · [Developers](coders_en.md) · [Office Work](office_en.md)
 
 ---
@@ -205,13 +205,13 @@ Agent mode in VS Code allows Copilot to **autonomously** perform multiple steps:
 
 ### When to Use Agent Mode?
 
-| Scenario | Agent | Chat |
+| Scenario | Agent ✅ | Chat 💬 |
 |----------|---------|---------|
-| New feature across multiple files | Yes | |
-| Refactoring an entire module | Yes | |
-| Debugging with terminal access | Yes | |
-| Writing a single function | | suffices |
-| Quick explanation | | suffices |
+| New feature across multiple files | ✅ | |
+| Refactoring an entire module | ✅ | |
+| Debugging with terminal access | ✅ | |
+| Writing a single function | | 💬 suffices |
+| Quick explanation | | 💬 suffices |
 
 ### Structure for Agent Prompts
 
@@ -243,7 +243,7 @@ Agent mode in VS Code allows Copilot to **autonomously** perform multiple steps:
 4. **Watch terminal output** – Agent runs commands that may have side effects
 5. **Use undo** – VS Code can revert agent changes
 
-> **Detailed agent examples in:**
+> 💡 **Detailed agent examples in:**
 > [Analysts](analysts_en.md) · [Legal](law_en.md) · [Developers](coders_en.md) · [Office Work](office_en.md)
 
 ---
@@ -283,12 +283,12 @@ You are [Name], an assistant for [Purpose].
 
 ```mermaid
 flowchart TB
-    A[User Request] --> B[Orchestrator Agent]
+    A[👤 User Request] --> B[🤖 Orchestrator Agent]
     B --> C[Agent A<br/>Research]
     B --> D[Agent B<br/>Processing]
     B --> E[Agent C<br/>Review]
-    C & D & E --> F[Summary]
-    F --> G[User Response]
+    C & D & E --> F[📋 Summary]
+    F --> G[👤 User Response]
 
     style A fill:#e3f2fd
     style B fill:#fff3e0
@@ -296,7 +296,7 @@ flowchart TB
     style G fill:#c8e6c9
 ```
 
-> **Job-specific agent examples:**
+> 💡 **Job-specific agent examples:**
 > [Reporting Agent (Analysts)](analysts_en.md#5-agent-automated-analysis-pipelines) · [Contract Agent (Legal)](law_en.md#5-agent-automated-contract--compliance-review) · [IT Helpdesk (Office)](office_en.md#6-agent-office-assistant--helpdesk)
 
 ---
@@ -307,13 +307,13 @@ flowchart TB
 
 ```
 ┌────────────────────────────────────┐
-│ 1. VS Code Settings (global) │ → Applies to all projects
+│  1. VS Code Settings (global)       │  → Applies to all projects
 ├────────────────────────────────────┤
-│ 2. .github/copilot-instructions.md │ → Applies to the project
+│  2. .github/copilot-instructions.md │  → Applies to the project
 ├────────────────────────────────────┤
-│ 3. .copilot/*.md │ → Context files per topic
+│  3. .copilot/*.md                   │  → Context files per topic
 ├────────────────────────────────────┤
-│ 4. Inline prompt context │ → Applies to the single request
+│  4. Inline prompt context           │  → Applies to the single request
 └────────────────────────────────────┘
 ```
 
@@ -425,10 +425,10 @@ Write unit tests for #file:
 
 | Guide | Description |
 |-------|-------------|
-| [Analysts](analysts_en.md) | Data analysis, reports, SQL, KPIs, visualizations |
-| [Legal](law_en.md) | Contracts, compliance, GDPR, clause analysis |
-| [Developers](coders_en.md) | Code, debugging, architecture, CI/CD, refactoring |
-| [Office Work](office_en.md) | Emails, meetings, presentations, file conversion |
+| 📊 [Analysts](analysts_en.md) | Data analysis, reports, SQL, KPIs, visualizations |
+| ⚖️ [Legal](law_en.md) | Contracts, compliance, GDPR, clause analysis |
+| 💻 [Developers](coders_en.md) | Code, debugging, architecture, CI/CD, refactoring |
+| 🏢 [Office Work](office_en.md) | Emails, meetings, presentations, file conversion |
 
 ## Further Reading
 
