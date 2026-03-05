@@ -1,3 +1,10 @@
+---
+title: "📊 Analysts"
+layout: default
+nav_order: 1
+parent: "🇬🇧 Fundamentals"
+---
+
 # ProPrompt for Analysts
 
 > **Target Audience:** Business Analysts, Data Analysts, BI Specialists, Controllers, and anyone working with data, reports, and insights.

@@ -1,3 +1,10 @@
+---
+title: "⚖️ Juristen & Legal"
+layout: default
+nav_order: 2
+parent: "🇩🇪 Grundlagen"
+---
+
 # ProPrompt für Juristen & Legal
 
 > **Zielgruppe:** Juristen, Vertragsmanager, Compliance-Beauftragte, Rechtsabteilungen und alle, die mit Verträgen, Regulierung und rechtlichen Texten arbeiten.

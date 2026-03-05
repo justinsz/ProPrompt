@@ -1,3 +1,10 @@
+---
+title: "⚖️ Legal"
+layout: default
+nav_order: 2
+parent: "🇬🇧 Fundamentals"
+---
+
 # ProPrompt for Legal Professionals
 
 > **Target Audience:** Lawyers, Contract Managers, Compliance Officers, Legal Departments, and anyone working with contracts, regulation, and legal texts.

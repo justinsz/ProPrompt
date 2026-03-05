@@ -1,3 +1,10 @@
+---
+title: "🏢 Office Work"
+layout: default
+nav_order: 4
+parent: "🇬🇧 Fundamentals"
+---
+
 # ProPrompt for Everyday Office Work
 
 > **Target Audience:** All office workers, project managers, assistants, HR, marketing, and anyone looking to use AI for everyday office tasks.

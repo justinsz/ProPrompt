@@ -1,3 +1,10 @@
+---
+title: "🇬🇧 Fundamentals"
+layout: default
+nav_order: 3
+has_children: true
+---
+
 # ProPrompt – Fundamentals of Effective Prompting
 
 > **Target Audience:** Anyone who wants to use GitHub Copilot, Copilot Studio Agents, or AI-powered toolchains productively – no prior AI experience required.

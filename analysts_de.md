@@ -1,3 +1,10 @@
+---
+title: "📊 Analysten"
+layout: default
+nav_order: 1
+parent: "🇩🇪 Grundlagen"
+---
+
 # ProPrompt für Analysten
 
 > **Zielgruppe:** Business Analysten, Datenanalysten, BI-Spezialisten, Controller und alle, die mit Daten, Berichten und Erkenntnissen arbeiten.

@@ -1,3 +1,10 @@
+---
+title: "💻 Developers"
+layout: default
+nav_order: 3
+parent: "🇬🇧 Fundamentals"
+---
+
 # ProPrompt for Developers
 
 > **Target Audience:** Software Developers, DevOps Engineers, Full-Stack Developers, and anyone who writes, reviews, or debugs code.

@@ -1,3 +1,10 @@
+---
+title: "💻 Entwickler"
+layout: default
+nav_order: 3
+parent: "🇩🇪 Grundlagen"
+---
+
 # ProPrompt für Entwickler
 
 > **Zielgruppe:** Software-Entwickler, DevOps Engineers, Full-Stack-Developer und alle, die Code schreiben, reviewen oder debuggen.

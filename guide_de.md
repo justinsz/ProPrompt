@@ -1,3 +1,10 @@
+---
+title: "🇩🇪 Grundlagen"
+layout: default
+nav_order: 2
+has_children: true
+---
+
 # ProPrompt – Grundlagen des effektiven Promptings
 
 > **Zielgruppe:** Alle, die GitHub Copilot, Copilot Studio Agents oder KI-gestützte Toolchains produktiv einsetzen wollen – auch ohne KI-Vorwissen.

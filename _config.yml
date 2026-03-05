@@ -1,0 +1,36 @@
+title: ProPrompt
+description: "The ultimate guide to effective AI prompting – for GitHub Copilot, Copilot Studio Agents & Agent Toolchains."
+url: "https://justinsz.github.io"
+baseurl: "/ProPrompt"
+
+remote_theme: just-the-docs/just-the-docs@v0.10.0
+
+# Farbe & Branding
+color_scheme: light
+logo: false
+
+# Suche aktivieren
+search_enabled: true
+search.button: true
+
+# Mermaid-Diagramme aktivieren
+mermaid:
+  version: "11"
+
+# Navigation
+nav_sort: case_insensitive
+
+# Footer
+footer_content: "ProPrompt &copy; 2026 – MIT License"
+
+# Zusätzliche Plugins
+plugins:
+  - jekyll-remote-theme
+
+# Dateien ausschließen
+exclude:
+  - LICENSE
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor

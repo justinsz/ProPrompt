@@ -1,3 +1,10 @@
+---
+title: "🏢 Büroalltag"
+layout: default
+nav_order: 4
+parent: "🇩🇪 Grundlagen"
+---
+
 # ProPrompt für den Büroalltag
 
 > **Zielgruppe:** Alle Büroangestellten, Projektmanager, Assistenzen, HR, Marketing und alle, die KI für alltägliche Büroaufgaben nutzen möchten.
