@@ -2,6 +2,7 @@
 title: "🔒 Security & Privacy"
 layout: default
 nav_order: 5
+parent: "🇬🇧 Fundamentals"
 ---
 
 # 🔒 AI Security, Privacy & GDPR

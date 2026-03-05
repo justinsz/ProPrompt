@@ -12,29 +12,37 @@ nav_order: 1
 
 ---
 
-## 📖 Wähle deinen Guide / Choose Your Guide
+## � When in doubt, start here
+
+| | Deutsch | English |
+|---|---------|---------|
+| **Grundlagen / Fundamentals** | [🇩🇪 Starte hier](guide_de.md) | [🇬🇧 Start here](guide_en.md) |
+| **Sicherheit / Security** | [🔒 Datenschutz & DSGVO](security_de.md) | [🔒 Privacy & GDPR](security_en.md) |
+
+> Lies zuerst die **Grundlagen** – dann wähle deinen Berufs-Guide.
+> Read the **Fundamentals** first – then pick your job guide.
+
+---
+
+## 📖 Berufs-Guides / Job Guides
 
 ### 🇩🇪 Deutsch
 
 | Guide | Beschreibung |
 |-------|-------------|
-| [**Grundlagen**](guide_de.md) | Markdown, RICE-Prinzip, Dos & Don'ts, Instruction Files |
-| [**📊 Analysten**](analysts_de.md) | Datenanalyse, Reports, SQL, KPIs, Visualisierungen |
-| [**⚖️ Juristen & Legal**](law_de.md) | Verträge, Compliance, DSGVO, Klauselanalyse |
-| [**💻 Entwickler**](coders_de.md) | Code, Debugging, Architektur, CI/CD, Refactoring |
-| [**🏢 Büroalltag**](office_de.md) | E-Mails, Meetings, Präsentationen, Dateien umwandeln |
-| [**🔒 Sicherheit & Datenschutz**](security_de.md) | DSGVO, Anonymisierung, private Daten, KI-Richtlinien |
+| [📊 **Analysten**](analysts_de.md) | Datenanalyse, Reports, SQL, KPIs, Visualisierungen |
+| [⚖️ **Juristen & Legal**](law_de.md) | Verträge, Compliance, DSGVO, Klauselanalyse |
+| [💻 **Entwickler**](coders_de.md) | Code, Debugging, Architektur, CI/CD, Refactoring |
+| [🏢 **Büroalltag**](office_de.md) | E-Mails, Meetings, Präsentationen, Dateien umwandeln |
 
 ### 🇬🇧 English
 
 | Guide | Description |
 |-------|-------------|
-| [**Fundamentals**](guide_en.md) | Markdown, RICE Framework, Dos & Don'ts, Instruction Files |
-| [**📊 Analysts**](analysts_en.md) | Data analysis, reports, SQL, KPIs, visualizations |
-| [**⚖️ Legal**](law_en.md) | Contracts, compliance, GDPR, clause analysis |
-| [**💻 Developers**](coders_en.md) | Code, debugging, architecture, CI/CD, refactoring |
-| [**🏢 Office Work**](office_en.md) | Emails, meetings, presentations, file conversion |
-| [**🔒 Security & Privacy**](security_en.md) | GDPR, anonymization, private data, AI policies |
+| [📊 **Analysts**](analysts_en.md) | Data analysis, reports, SQL, KPIs, visualizations |
+| [⚖️ **Legal**](law_en.md) | Contracts, compliance, GDPR, clause analysis |
+| [💻 **Developers**](coders_en.md) | Code, debugging, architecture, CI/CD, refactoring |
+| [🏢 **Office Work**](office_en.md) | Emails, meetings, presentations, file conversion |
 
 ---
 
@@ -51,12 +59,10 @@ Each guide includes:
 
 ## 🏁 Quick Start
 
-1. **Pick your language** – Deutsch or English
-2. **Read the Fundamentals** – understand the RICE framework
-3. **Choose your job guide** – Analysts, Legal, Developers, or Office
-4. **Copy the templates** – use the Cheat Sheet in your daily work
-
----
+1. **Lies die Grundlagen / Read the Fundamentals** – RICE-Prinzip, Dos & Don'ts
+2. **Wähle deinen Guide / Pick your job guide** – Analysten, Juristen, Entwickler oder Büro
+3. **Kopiere die Templates / Copy the templates** – Cheat Sheets für den Alltag
+4. **Prüfe den Sicherheits-Guide / Check the Security guide** – Datenschutz & DSGVO
 
 ---
 
