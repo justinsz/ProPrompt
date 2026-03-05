@@ -153,9 +153,9 @@ Use an xychart-beta bar chart with labeled axes.
 
 ```mermaid
 xychart-beta
-    title "Monthly Revenue 2026 (in k€)"
+    title "Monthly Revenue 2026 (in kEUR)"
     x-axis [Jan, Feb, Mar, Apr, May, Jun]
-    y-axis "Revenue (k€)" 250 --> 320
+    y-axis "Revenue (kEUR)" 250 --> 320
     bar [280, 285, 285, 290, 295, 310]
 ```
 
