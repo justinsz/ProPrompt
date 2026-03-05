@@ -153,9 +153,9 @@ Nutze ein xychart-beta Bar-Chart mit beschrifteten Achsen.
 
 ```mermaid
 xychart-beta
-    title "Monatlicher Umsatz 2026 (in Tsd. €)"
-    x-axis [Jan, Feb, Mär, Apr, Mai, Jun]
-    y-axis "Umsatz (Tsd. €)" 250 --> 320
+    title "Monatlicher Umsatz 2026 (in Tsd. EUR)"
+    x-axis ["Jan", "Feb", "Mar", "Apr", "Mai", "Jun"]
+    y-axis "Umsatz (Tsd. EUR)" 250 --> 320
     bar [280, 285, 285, 290, 295, 310]
 ```
 
