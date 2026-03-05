@@ -254,48 +254,69 @@ LLMs cannot directly read `.docx`, `.xlsx`, or `.pptx` files. Here are the key c
 
 ### Quick Reference
 
-| Source | Target | Tool |
-|--------|--------|------|
-| Word (.docx) | Markdown | Pandoc / Python |
-| Excel (.xlsx) | CSV / Markdown table | Export / Pandas |
-| PowerPoint (.pptx) | Markdown | Python |
-| PDF | Text | pdftotext / PyPDF2 |
+| Source | Target | Tool (no Python needed) |
+|--------|--------|-------------------------|
+| Word (.docx) | Markdown | Pandoc (CLI) |
+| Excel (.xlsx) | CSV | "Save As" → CSV in Excel |
+| PowerPoint (.pptx) | Text / Markdown | LibreOffice CLI or Copy & Paste |
+| PDF | Text | Online tools or Pandoc |
 
-### Word → Markdown (recommended: Pandoc)
+> 💡 **Tip:** All methods work without any programming knowledge.
+
+### Word → Markdown (Pandoc)
+
+Pandoc is a free command-line tool ([pandoc.org](https://pandoc.org)):
 
 ```bash
 pandoc input.docx -t markdown -o output.md
 ```
 
-### Excel → Markdown Table (Python)
+### Excel → CSV (Built-in)
 
-```python
-import pandas as pd
+No extra tools needed – directly in Excel:
 
-df = pd.read_excel("data.xlsx")
-# Only relevant columns and rows
-subset = df[["Name", "Status", "Date"]].head(50)
-print(subset.to_markdown(index=False))
+1. Open file → **File → Save As**
+2. Choose format: **CSV (Comma delimited)**
+3. Save – done
+
+Alternatively via LibreOffice command line:
+
+```bash
+libreoffice --headless --convert-to csv data.xlsx
 ```
 
-### PowerPoint → Markdown (Python)
+> 💡 For Markdown tables: paste CSV into the AI and prompt:
+> *"Convert this CSV data into a Markdown table."*
 
-```python
-from pptx import Presentation
+### PowerPoint → Text (Copy & Paste or LibreOffice)
 
-def pptx_to_markdown(filepath):
-    prs = Presentation(filepath)
-    md_lines = []
-    for i, slide in enumerate(prs.slides, 1):
-        md_lines.append(f"## Slide {i}")
-        for shape in slide.shapes:
-            if shape.has_text_frame:
-                for para in shape.text_frame.paragraphs:
-                    if para.text.strip():
-                        md_lines.append(para.text)
-        md_lines.append("")
-    return "\n".join(md_lines)
+**Simplest way:** Select slides → copy text → paste into AI.
+
+**Automated via LibreOffice:**
+
+```bash
+libreoffice --headless --convert-to txt presentation.pptx
 ```
+
+**Or via PDF intermediate step:**
+
+```bash
+libreoffice --headless --convert-to pdf presentation.pptx
+pandoc presentation.pdf -t markdown -o presentation.md
+```
+
+### PDF → Text
+
+```bash
+# Option 1: Pandoc
+pandoc input.pdf -t markdown -o output.md
+
+# Option 2: pdftotext (part of poppler-utils)
+pdftotext input.pdf output.txt
+```
+
+> 💡 For scanned PDFs (images): Apply OCR first, e.g. with the free tool **OCRmyPDF**:
+> `ocrmypdf scan.pdf scan_ocr.pdf`
 
 ### Quality Checklist After Conversion
 
@@ -316,11 +337,11 @@ flowchart LR
     B --> F[PDF]
 
     C --> G[Pandoc]
-    D --> H[Pandas]
-    E --> I[python-pptx]
-    F --> J[pdftotext]
+    D --> H[Save As CSV]
+    E --> I[LibreOffice CLI]
+    F --> J[Pandoc / pdftotext]
 
-    G & H & I & J --> K[Markdown / CSV]
+    G & H & I & J --> K[Markdown / CSV / Text]
     K --> L[AI-Ready]
 
     style A fill:#e3f2fd

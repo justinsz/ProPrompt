@@ -29,6 +29,13 @@ The full documentation is available as a website – with navigation, search, an
 | 💻 Developers | [Entwickler](https://justinsz.github.io/ProPrompt/coders_de.html) | [Developers](https://justinsz.github.io/ProPrompt/coders_en.html) |
 | 🏢 Office | [Büroalltag](https://justinsz.github.io/ProPrompt/office_de.html) | [Office Work](https://justinsz.github.io/ProPrompt/office_en.html) |
 
+### Security & Privacy
+
+| Language | Guide |
+|----------|-------|
+| Deutsch | [🔒 Sicherheit & Datenschutz](https://justinsz.github.io/ProPrompt/security_de.html) |
+| English | [🔒 Security & Privacy](https://justinsz.github.io/ProPrompt/security_en.html) |
+
 ---
 
 ## 🎯 What's Inside Each Guide?
@@ -40,6 +47,7 @@ Every job-specific guide includes:
 - **Agent examples** – Copilot Studio agent templates & VS Code agent prompts
 - **Mermaid diagrams** – Visual process flows and architectures
 - **Cheat sheets** – Copy-paste templates for daily use
+- **Security guide** – GDPR compliance, data anonymization, company AI policies
 
 ```mermaid
 flowchart LR
@@ -47,6 +55,7 @@ flowchart LR
     A --> C[Legal]
     A --> D[Developers]
     A --> E[Office]
+    A --> S[🔒 Security<br/>& Privacy]
 
     B & C & D & E --> F[Agents &<br/>Toolchains]
 
@@ -56,6 +65,7 @@ flowchart LR
     style D fill:#e8f5e9
     style E fill:#f3e5f5
     style F fill:#fff9c4
+    style S fill:#ffcdd2
 ```
 
 ## 👥 Who Is This For?
@@ -67,6 +77,7 @@ flowchart LR
 | Software Developer | [Fundamentals](guide_en.md) → [Developers Guide](coders_en.md) |
 | PM / Assistant / HR / Marketing | [Fundamentals](guide_en.md) → [Office Guide](office_en.md) |
 | Everyone | [Fundamentals](guide_en.md) to learn the RICE framework & Dos/Don'ts |
+| Security-conscious users | [Fundamentals](guide_en.md) → [🔒 Security Guide](security_en.md) |
 
 ## 🏁 Quick Start
 

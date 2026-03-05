@@ -255,48 +255,69 @@ LLMs können keine `.docx`, `.xlsx` oder `.pptx` direkt lesen. Hier die wichtigs
 
 ### Schnellübersicht
 
-| Quelle | Ziel | Tool |
-|--------|------|------|
-| Word (.docx) | Markdown | Pandoc / Python |
-| Excel (.xlsx) | CSV / Markdown-Tabelle | Export / Pandas |
-| PowerPoint (.pptx) | Markdown | Python |
-| PDF | Text | pdftotext / PyPDF2 |
+| Quelle | Ziel | Tool (kein Python nötig) |
+|--------|------|-------------------------|
+| Word (.docx) | Markdown | Pandoc (CLI) |
+| Excel (.xlsx) | CSV | "Speichern unter" → CSV in Excel |
+| PowerPoint (.pptx) | Text / Markdown | LibreOffice CLI oder Copy & Paste |
+| PDF | Text | Online-Tools oder Pandoc |
 
-### Word → Markdown (empfohlen: Pandoc)
+> 💡 **Tipp:** Alle Wege funktionieren ohne Programmierkenntnisse.
+
+### Word → Markdown (Pandoc)
+
+Pandoc ist ein kostenloses Kommandozeilen-Tool ([pandoc.org](https://pandoc.org)):
 
 ```bash
 pandoc input.docx -t markdown -o output.md
 ```
 
-### Excel → Markdown-Tabelle (Python)
+### Excel → CSV (Bordmittel)
 
-```python
-import pandas as pd
+Kein Tool nötig – direkt in Excel:
 
-df = pd.read_excel("data.xlsx")
-# Nur relevante Spalten und Zeilen
-subset = df[["Name", "Status", "Datum"]].head(50)
-print(subset.to_markdown(index=False))
+1. Datei öffnen → **Datei → Speichern unter**
+2. Format wählen: **CSV (Trennzeichen-getrennt)**
+3. Speichern – fertig
+
+Alternativ per LibreOffice-Kommandozeile:
+
+```bash
+libreoffice --headless --convert-to csv data.xlsx
 ```
 
-### PowerPoint → Markdown (Python)
+> 💡 Für Markdown-Tabellen: CSV in die KI einfügen und prompten:
+> *"Wandle diese CSV-Daten in eine Markdown-Tabelle um."*
 
-```python
-from pptx import Presentation
+### PowerPoint → Text (Copy & Paste oder LibreOffice)
 
-def pptx_to_markdown(filepath):
-    prs = Presentation(filepath)
-    md_lines = []
-    for i, slide in enumerate(prs.slides, 1):
-        md_lines.append(f"## Folie {i}")
-        for shape in slide.shapes:
-            if shape.has_text_frame:
-                for para in shape.text_frame.paragraphs:
-                    if para.text.strip():
-                        md_lines.append(para.text)
-        md_lines.append("")
-    return "\n".join(md_lines)
+**Einfachster Weg:** Folien markieren → Text kopieren → in KI einfügen.
+
+**Automatisiert per LibreOffice:**
+
+```bash
+libreoffice --headless --convert-to txt presentation.pptx
 ```
+
+**Oder als PDF-Zwischenschritt:**
+
+```bash
+libreoffice --headless --convert-to pdf presentation.pptx
+pandoc presentation.pdf -t markdown -o presentation.md
+```
+
+### PDF → Text
+
+```bash
+# Option 1: Pandoc
+pandoc input.pdf -t markdown -o output.md
+
+# Option 2: pdftotext (Teil von poppler-utils)
+pdftotext input.pdf output.txt
+```
+
+> 💡 Für gescannte PDFs (Bilder): Zuerst OCR anwenden, z.B. mit dem kostenlosen Tool **OCRmyPDF**:
+> `ocrmypdf scan.pdf scan_ocr.pdf`
 
 ### Qualitäts-Checkliste nach Konvertierung
 
@@ -317,11 +338,11 @@ flowchart LR
     B --> F[PDF]
 
     C --> G[Pandoc]
-    D --> H[Pandas]
-    E --> I[python-pptx]
-    F --> J[pdftotext]
+    D --> H[Speichern als CSV]
+    E --> I[LibreOffice CLI]
+    F --> J[Pandoc / pdftotext]
 
-    G & H & I & J --> K[Markdown / CSV]
+    G & H & I & J --> K[Markdown / CSV / Text]
     K --> L[KI-Ready]
 
     style A fill:#e3f2fd

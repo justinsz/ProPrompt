@@ -23,6 +23,7 @@ nav_order: 1
 | [**⚖️ Juristen & Legal**](law_de.md) | Verträge, Compliance, DSGVO, Klauselanalyse |
 | [**💻 Entwickler**](coders_de.md) | Code, Debugging, Architektur, CI/CD, Refactoring |
 | [**🏢 Büroalltag**](office_de.md) | E-Mails, Meetings, Präsentationen, Dateien umwandeln |
+| [**🔒 Sicherheit & Datenschutz**](security_de.md) | DSGVO, Anonymisierung, private Daten, KI-Richtlinien |
 
 ### 🇬🇧 English
 
@@ -33,6 +34,7 @@ nav_order: 1
 | [**⚖️ Legal**](law_en.md) | Contracts, compliance, GDPR, clause analysis |
 | [**💻 Developers**](coders_en.md) | Code, debugging, architecture, CI/CD, refactoring |
 | [**🏢 Office Work**](office_en.md) | Emails, meetings, presentations, file conversion |
+| [**🔒 Security & Privacy**](security_en.md) | GDPR, anonymization, private data, AI policies |
 
 ---
 
@@ -45,6 +47,7 @@ Each guide includes:
 - **Agent examples** – Copilot Studio & VS Code Agent Mode
 - **Mermaid diagrams** – process flows, toolchains, architectures
 - **Cheat sheets** – quick reference templates & context checklists
+- **Security guide** – GDPR compliance, data anonymization, AI policies
 
 ## 🏁 Quick Start
 
