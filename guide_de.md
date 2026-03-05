@@ -1,6 +1,8 @@
-# ProPrompt – Der Leitfaden für effektives Prompting
+# ProPrompt – Grundlagen des effektiven Promptings
 
 > **Zielgruppe:** Alle, die GitHub Copilot, Copilot Studio Agents oder KI-gestützte Toolchains produktiv einsetzen wollen – auch ohne KI-Vorwissen.
+> 
+> **Berufsspezifische Guides:** [Analysten](analysts_de.md) · [Juristen](law_de.md) · [Entwickler](coders_de.md) · [Büroalltag](office_de.md)
 
 ---
 
@@ -9,14 +11,11 @@
 1. [Markdown-Schnelleinstieg](#1-markdown-schnelleinstieg)
 2. [Grundlagen des Promptings](#2-grundlagen-des-promptings)
 3. [Dos & Don'ts – Übersicht](#3-dos--donts--übersicht)
-4. [Prompting im normalen Arbeitsalltag (Chat & Edit)](#4-prompting-im-normalen-arbeitsalltag-chat--edit)
-5. [Prompting im Agent-Modus](#5-prompting-im-agent-modus)
-6. [Copilot Studio Agents bauen](#6-copilot-studio-agents-bauen)
-7. [Agent-Toolchains entwerfen](#7-agent-toolchains-entwerfen)
-8. [Office-Dateien → LLM-freundliche Strukturen](#8-office-dateien--llm-freundliche-strukturen)
-9. [Dateien & Formate richtig aufbereiten](#9-dateien--formate-richtig-aufbereiten)
-10. [Instruction-Files & Custom Instructions](#10-instruction-files--custom-instructions)
-11. [Cheat-Sheet](#11-cheat-sheet)
+4. [Copilot Chat & Kontext-Variablen](#4-copilot-chat--kontext-variablen)
+5. [Agent-Modus – Überblick](#5-agent-modus--überblick)
+6. [Copilot Studio Agents – Überblick](#6-copilot-studio-agents--überblick)
+7. [Instruction-Files & Custom Instructions](#7-instruction-files--custom-instructions)
+8. [Cheat-Sheet](#8-cheat-sheet)
 
 ---
 
@@ -143,11 +142,9 @@ Expected:    Multi-Stage Dockerfile mit Kommentaren.
 
 ---
 
-## 4 Prompting im normalen Arbeitsalltag (Chat & Edit)
+## 4 Copilot Chat & Kontext-Variablen
 
-### Copilot Chat – Best Practices
-
-**Slash-Commands nutzen:**
+### Slash-Commands
 
 | Command | Funktion |
 |---------|----------|
@@ -157,7 +154,7 @@ Expected:    Multi-Stage Dockerfile mit Kommentaren.
 | `/doc` | Dokumentation erstellen |
 | `/new` | Neues Projekt/Datei scaffolden |
 
-**Kontext-Variablen:**
+### Kontext-Variablen
 
 | Variable | Beschreibung |
 |----------|-------------|
@@ -178,23 +175,18 @@ Expected:    Multi-Stage Dockerfile mit Kommentaren.
 Gib Verbesserungsvorschläge als Diff aus.
 ```
 
-**Refactoring:**
-```
-Refactore die Funktion in #file:src/utils/parser.ts:
-- Extrahiere die Validierungslogik in eine eigene Funktion
-- Nutze Early Returns statt verschachtelter If-Blöcke
-- Behalte die bestehende Signatur bei
-```
-
 **Fehlerbehebung:**
 ```
 Der folgende Fehler tritt auf: #terminalLastCommand
 Analysiere den Fehler im Kontext von #file:src/app.ts und schlage eine Lösung vor.
 ```
 
+> 💡 **Mehr Beispiele findest du in den berufsspezifischen Guides:**  
+> [Analysten](analysts_de.md) · [Juristen](law_de.md) · [Entwickler](coders_de.md) · [Büroalltag](office_de.md)
+
 ---
 
-## 5 Prompting im Agent-Modus
+## 5 Agent-Modus – Überblick
 
 ### Was ist der Agent-Modus?
 
@@ -206,17 +198,15 @@ Der Agent-Modus in VS Code erlaubt Copilot, **selbstständig** mehrere Schritte 
 
 ### Wann Agent-Modus nutzen?
 
-| Szenario | Agent ✅ | Chat ❌ |
-|----------|---------|--------|
+| Szenario | Agent ✅ | Chat 💬 |
+|----------|---------|---------|
 | Neues Feature über mehrere Dateien | ✅ | |
 | Refactoring eines ganzen Moduls | ✅ | |
 | Debugging mit Terminalzugriff | ✅ | |
-| Einzelne Funktion schreiben | | ❌ Chat reicht |
-| Schnelle Erklärung | | ❌ Chat reicht |
+| Einzelne Funktion schreiben | | 💬 reicht |
+| Schnelle Erklärung | | 💬 reicht |
 
-### Effektives Agent-Prompting
-
-**Struktur für Agent-Prompts:**
+### Struktur für Agent-Prompts
 
 ```markdown
 ## Ziel
@@ -238,34 +228,6 @@ Der Agent-Modus in VS Code erlaubt Copilot, **selbstständig** mehrere Schritte 
 - [Explizite Ausschlüsse]
 ```
 
-**Praxis-Beispiel:**
-
-```markdown
-## Ziel
-Erstelle eine REST-API-Route für Benutzerregistrierung.
-
-## Kontext
-- Express.js mit TypeScript
-- Prisma ORM mit PostgreSQL
-- Bestehende Struktur in /src/routes/ und /src/services/
-
-## Schritte
-1. Erstelle das Prisma-Schema für User (email, passwordHash, createdAt)
-2. Erstelle den Service in /src/services/userService.ts
-3. Erstelle die Route in /src/routes/auth.ts
-4. Füge Input-Validierung mit zod hinzu
-5. Schreibe Tests in /src/__tests__/auth.test.ts
-
-## Anforderungen
-- Passwort mit bcrypt hashen
-- E-Mail-Validierung
-- Bestehende Code-Konventionen einhalten
-
-## Nicht tun
-- Keine Änderungen an bestehenden Routes
-- Kein neues ORM einführen
-```
-
 ### Agent-Modus Tipps
 
 1. **Instruction Files nutzen** – `.github/copilot-instructions.md` wird automatisch geladen
@@ -274,17 +236,18 @@ Erstelle eine REST-API-Route für Benutzerregistrierung.
 4. **Terminal-Output beobachten** – Agent führt Befehle aus, die Nebeneffekte haben können
 5. **Undo nutzen** – VS Code kann Agent-Änderungen rückgängig machen
 
+> 💡 **Ausführliche Agent-Beispiele findest du in:**  
+> [Analysten](analysts_de.md) · [Juristen](law_de.md) · [Entwickler](coders_de.md) · [Büroalltag](office_de.md)
+
 ---
 
-## 6 Copilot Studio Agents bauen
+## 6 Copilot Studio Agents – Überblick
 
 ### Was ist Copilot Studio?
 
 Microsoft Copilot Studio ermöglicht das Erstellen eigener KI-Agents ohne Code – für Teams, SharePoint, Web und mehr.
 
-### Prompt-Design für Studio Agents
-
-**System-Prompt strukturieren:**
+### System-Prompt strukturieren
 
 ```markdown
 # Rolle
@@ -309,304 +272,29 @@ Du bist [Name], ein Assistent für [Zweck].
 - Verlinke auf [Quellen] wenn möglich
 ```
 
-**Praxis-Beispiel – IT-Helpdesk-Agent:**
+### Agent-Toolchain Architektur
 
-```markdown
-# Rolle
-Du bist IT-Helper, der interne IT-Support-Assistent der Firma Contoso.
-
-# Fähigkeiten
-- Lösung häufiger IT-Probleme (Passwort-Reset, VPN, Drucker)
-- Durchsuchen der internen Wissensdatenbank
-- Erstellen von Support-Tickets
-
-# Verhalten
-- Antworte auf Deutsch
-- Nutze eine freundliche, geduldige Sprache
-- Frage nach, wenn das Problem unklar ist
-- Gib Schritt-für-Schritt-Anleitungen
-
-# Grenzen
-- Keine Änderungen an Produktionssystemen
-- Kein Zugriff auf personenbezogene Daten
-- Bei Hardware-Problemen: Weiterleitung an physischen Support
-
-# Eskalation
-Wenn du das Problem nicht lösen kannst, erstelle ein Ticket mit:
-- Problembeschreibung
-- Bisherige Schritte
-- Dringlichkeit (Niedrig/Mittel/Hoch)
+```mermaid
+flowchart TB
+    A[👤 Benutzer-Anfrage] --> B[🤖 Orchestrator-Agent]
+    B --> C[Agent A<br/>Recherche]
+    B --> D[Agent B<br/>Verarbeitung]
+    B --> E[Agent C<br/>Review]
+    C & D & E --> F[📋 Zusammenfassung]
+    F --> G[👤 Benutzer-Antwort]
+    
+    style A fill:#e3f2fd
+    style B fill:#fff3e0
+    style F fill:#e8f5e9
+    style G fill:#c8e6c9
 ```
 
-### Topics & Trigger-Phrases
-
-| Thema | Trigger-Phrases |
-|-------|----------------|
-| Passwort-Reset | „Passwort vergessen", „Kennwort zurücksetzen", „kann mich nicht anmelden" |
-| VPN-Probleme | „VPN geht nicht", „Verbindung zum Netzwerk", „Remote-Zugriff" |
-| Drucker | „Drucker druckt nicht", „Drucker hinzufügen", „Papier-Stau" |
+> 💡 **Berufsspezifische Agent-Beispiele:**  
+> [Reporting-Agent (Analysten)](analysts_de.md#5-agent-automatisierte-analyse-pipelines) · [Vertrags-Agent (Legal)](law_de.md#5-agent-automatisierte-vertrags---compliance-prüfung) · [IT-Helpdesk (Büro)](office_de.md#6-agent-büroassistent--helpdesk)
 
 ---
 
-## 7 Agent-Toolchains entwerfen
-
-### Was ist eine Agent-Toolchain?
-
-Eine Toolchain verbindet mehrere Agents und Tools zu einem automatisierten Workflow.
-
-### Architektur-Muster
-
-```
-[Benutzer-Anfrage]
-       ↓
-[Orchestrator-Agent]
-       ↓
-  ┌────┼────┐
-  ↓    ↓    ↓
-[Agent A] [Agent B] [Agent C]
-(Recherche) (Code)  (Review)
-  ↓    ↓    ↓
-  └────┼────┘
-       ↓
-[Zusammenfassung]
-       ↓
-[Benutzer-Antwort]
-```
-
-### Toolchain-Prompts gestalten
-
-**Orchestrator-Prompt:**
-```markdown
-Du bist der Orchestrator. Deine Aufgabe:
-1. Analysiere die Benutzer-Anfrage
-2. Entscheide, welche Agents benötigt werden
-3. Rufe die Agents in der richtigen Reihenfolge auf
-4. Kombiniere die Ergebnisse zu einer kohärenten Antwort
-
-Verfügbare Agents:
-- @recherche – Sucht in Datenquellen
-- @code – Schreibt und überprüft Code
-- @review – Prüft Qualität und Sicherheit
-```
-
-**Spezialisten-Agent-Prompt:**
-```markdown
-Du bist der Code-Agent. Du erhältst Aufgaben vom Orchestrator.
-
-Input-Format:
-- Aufgabe: [Beschreibung]
-- Kontext: [Relevante Dateien/Infos]
-- Constraints: [Einschränkungen]
-
-Output-Format:
-- Status: [Erfolg/Fehler]
-- Ergebnis: [Code/Erklärung]
-- Confidence: [Hoch/Mittel/Niedrig]
-```
-
-### Praxis: Power Automate + Copilot Studio
-
-```
-[Teams-Nachricht]
-  → [Copilot Studio Agent] (Klassifizierung)
-    → [Power Automate Flow]
-      → [SharePoint-Liste aktualisieren]
-      → [E-Mail senden]
-      → [Teams-Nachricht an Kanal]
-```
-
----
-
-## 8 Office-Dateien → LLM-freundliche Strukturen
-
-### Das Problem
-
-LLMs können keine `.docx`, `.xlsx` oder `.pptx`-Dateien direkt lesen. Diese müssen in textbasierte Formate konvertiert werden.
-
-### Konvertierungs-Guide
-
-#### Word (.docx) → Markdown
-
-**Manuell:**
-1. Öffne das Dokument in Word
-2. Datei → Speichern unter → **„Nur Text (.txt)"** oder nutze Pandoc
-3. Strukturiere mit Markdown-Überschriften nach
-
-**Mit Pandoc (empfohlen):**
-```bash
-pandoc input.docx -t markdown -o output.md
-```
-
-**Mit Python:**
-```python
-from docx import Document
-
-def docx_to_markdown(filepath):
-    doc = Document(filepath)
-    md_lines = []
-    for para in doc.paragraphs:
-        if para.style.name.startswith('Heading 1'):
-            md_lines.append(f"# {para.text}")
-        elif para.style.name.startswith('Heading 2'):
-            md_lines.append(f"## {para.text}")
-        elif para.style.name.startswith('Heading 3'):
-            md_lines.append(f"### {para.text}")
-        elif para.style.name == 'List Bullet':
-            md_lines.append(f"- {para.text}")
-        else:
-            md_lines.append(para.text)
-    return "\n\n".join(md_lines)
-```
-
-#### Excel (.xlsx) → Markdown/CSV
-
-**Als CSV exportieren:**
-1. Datei → Speichern unter → **CSV (Komma-getrennt)**
-
-**Als Markdown-Tabelle (Python):**
-```python
-import pandas as pd
-
-def xlsx_to_markdown(filepath, sheet_name=0):
-    df = pd.read_excel(filepath, sheet_name=sheet_name)
-    return df.to_markdown(index=False)
-```
-
-**Tipp:** Für große Tabellen nur relevante Spalten/Zeilen extrahieren:
-```python
-df = pd.read_excel("data.xlsx")
-# Nur relevante Spalten
-subset = df[["Name", "Status", "Datum"]].head(50)
-context = subset.to_markdown(index=False)
-```
-
-#### PowerPoint (.pptx) → Markdown
-
-```python
-from pptx import Presentation
-
-def pptx_to_markdown(filepath):
-    prs = Presentation(filepath)
-    md_lines = []
-    for i, slide in enumerate(prs.slides, 1):
-        md_lines.append(f"## Folie {i}")
-        for shape in slide.shapes:
-            if shape.has_text_frame:
-                for para in shape.text_frame.paragraphs:
-                    if para.text.strip():
-                        md_lines.append(para.text)
-        md_lines.append("")  # Leerzeile
-    return "\n".join(md_lines)
-```
-
-#### PDF → Text
-
-```bash
-# Mit pdftotext (poppler-utils)
-pdftotext input.pdf output.txt
-
-# Oder mit Python
-pip install PyPDF2
-```
-
-```python
-from PyPDF2 import PdfReader
-
-def pdf_to_text(filepath):
-    reader = PdfReader(filepath)
-    text = ""
-    for page in reader.pages:
-        text += page.extract_text() + "\n"
-    return text
-```
-
-### Qualitäts-Checkliste nach Konvertierung
-
-- [ ] Überschriften korrekt übernommen?
-- [ ] Tabellen lesbar formatiert?
-- [ ] Listen beibehalten?
-- [ ] Bilder als Beschreibung ergänzt?
-- [ ] Fußnoten/Referenzen übernommen?
-- [ ] Sonderzeichen korrekt?
-
----
-
-## 9 Dateien & Formate richtig aufbereiten
-
-### Projektstruktur für KI-Kontext
-
-```
-mein-projekt/
-├── .github/
-│   └── copilot-instructions.md    ← Projektweite KI-Regeln
-├── .copilot/
-│   ├── context.md                 ← Architektur & Technologie-Stack
-│   ├── conventions.md             ← Code-Konventionen
-│   └── glossary.md                ← Fachbegriffe
-├── docs/
-│   ├── architecture.md            ← Systemarchitektur
-│   ├── api.md                     ← API-Dokumentation
-│   └── decisions/                 ← Architecture Decision Records
-│       └── 001-database-choice.md
-├── src/
-│   └── ...
-└── README.md
-```
-
-### copilot-instructions.md – Beispiel
-
-```markdown
-# Projekt: Contoso Web-App
-
-## Tech-Stack
-- Frontend: React 18 + TypeScript 5
-- Backend: .NET 8 Web API
-- Datenbank: PostgreSQL 16
-- ORM: Entity Framework Core
-
-## Code-Konventionen
-- Verwende PascalCase für C#-Klassen und Methoden
-- Verwende camelCase für TypeScript-Variablen und Funktionen
-- Alle API-Endpoints geben `ApiResponse<T>` zurück
-- Fehlerbehandlung über globale Exception-Middleware
-
-## Architektur
-- Clean Architecture (Domain → Application → Infrastructure → API)
-- CQRS mit MediatR für Commands und Queries
-- Repository-Pattern für Datenzugriff
-
-## Regeln
-- Schreibe Unit-Tests für alle neuen Services
-- Verwende keine `var` in C# – explizite Typen bevorzugen
-- Alle DTOs sind `record`-Typen
-- API-Versioning über URL-Pfad (/api/v1/)
-```
-
-### Kontext-Dateien für Agents
-
-**Für Copilot Studio – Wissensdatenbank strukturieren:**
-
-```markdown
-# FAQ – Produkt XY
-
-## Häufige Fragen
-
-### Wie setze ich mein Passwort zurück?
-1. Gehe zu https://portal.contoso.com
-2. Klicke auf "Passwort vergessen"
-3. Gib deine E-Mail-Adresse ein
-4. Folge dem Link in der Bestätigungs-E-Mail
-
-### Wie beantrage ich einen neuen Laptop?
-1. Öffne ein Ticket im IT-Portal
-2. Kategorie: "Hardware-Anfrage"
-3. Beschreibe deine Anforderungen
-4. Genehmigung durch Vorgesetzten erforderlich
-```
-
----
-
-## 10 Instruction-Files & Custom Instructions
+## 7 Instruction-Files & Custom Instructions
 
 ### Ebenen der Konfiguration
 
@@ -635,7 +323,34 @@ In `settings.json`:
 }
 ```
 
-### Instruction-File Best Practices
+### copilot-instructions.md – Beispiel
+
+```markdown
+# Projekt: Contoso Web-App
+
+## Tech-Stack
+- Frontend: React 18 + TypeScript 5
+- Backend: .NET 8 Web API
+- Datenbank: PostgreSQL 16
+- ORM: Entity Framework Core
+
+## Code-Konventionen
+- Verwende PascalCase für C#-Klassen und Methoden
+- Verwende camelCase für TypeScript-Variablen und Funktionen
+- Alle API-Endpoints geben `ApiResponse<T>` zurück
+
+## Architektur
+- Clean Architecture (Domain → Application → Infrastructure → API)
+- CQRS mit MediatR für Commands und Queries
+- Repository-Pattern für Datenzugriff
+
+## Regeln
+- Schreibe Unit-Tests für alle neuen Services
+- Alle DTOs sind `record`-Typen
+- API-Versioning über URL-Pfad (/api/v1/)
+```
+
+### Best Practices
 
 1. **Kurz und präzise** – Jede Regel in einer Zeile
 2. **Positiv formulieren** – „Verwende X" statt „Verwende nicht Y"
@@ -645,7 +360,7 @@ In `settings.json`:
 
 ---
 
-## 11 Cheat-Sheet
+## 8 Cheat-Sheet
 
 ### Prompt-Vorlagen zum Kopieren
 
@@ -675,16 +390,6 @@ Schreibe Unit-Tests für #file:
 - Mocke externe Abhängigkeiten
 ```
 
-**API-Dokumentation:**
-```
-Erstelle eine OpenAPI 3.0-Dokumentation für #file.
-Inkludiere:
-- Alle Endpoints mit Methoden
-- Request/Response-Schemas
-- Beispiel-Payloads
-- Fehlercodes
-```
-
 **Agent – Neues Feature:**
 ```
 ## Ziel
@@ -708,6 +413,15 @@ Inkludiere:
 ```
 
 ---
+
+## Berufsspezifische Guides
+
+| Guide | Beschreibung |
+|-------|-------------|
+| 📊 [Analysten](analysts_de.md) | Datenanalyse, Reports, SQL, KPIs, Visualisierungen |
+| ⚖️ [Juristen & Legal](law_de.md) | Verträge, Compliance, DSGVO, Klauselanalyse |
+| 💻 [Entwickler](coders_de.md) | Code, Debugging, Architektur, CI/CD, Refactoring |
+| 🏢 [Büroalltag](office_de.md) | E-Mails, Meetings, Präsentationen, Dateien umwandeln |
 
 ## Weiterführende Links
 
